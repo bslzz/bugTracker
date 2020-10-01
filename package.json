@@ -1,0 +1,14 @@
+{
+  "name": "bugtracker",
+  "version": "1.0.0",
+  "description": "bug tracker project",
+  "main": "app.js",
+  "repository": "https://github.com/bslzz/bugTracker.git",
+  "author": "bslzz <bishalkoid@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  }
+}
