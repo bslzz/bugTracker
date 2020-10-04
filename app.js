@@ -12,6 +12,7 @@ app.use(express.json());
 
 //routes
 app.use('/api/admin', require('./routes/adminRoute'));
+app.use('/api/login', require('./routes/loginRoute'));
 
 //PORT
 const PORT = process.env.PORT || 7070;
