@@ -12,6 +12,8 @@ app.use(express.json());
 
 //routes
 app.use('/api/admin', require('./routes/adminRoute'));
+app.use('/api/employee', require('./routes/employeeRoute'));
+app.use('/api/client', require('./routes/clientRoute'));
 app.use('/api/login', require('./routes/loginRoute'));
 
 //PORT
