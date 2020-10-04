@@ -7,9 +7,11 @@ const app = express();
 //db
 require('./db/db');
 
-app.get('/', (req, res) => {
-  res.json('Hello');
-});
+//body, middleware
+app.use(express.json());
+
+//routes
+app.use('/api/admin', require('./routes/adminRoute'));
 
 //PORT
 const PORT = process.env.PORT || 7070;

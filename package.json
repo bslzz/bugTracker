@@ -10,9 +10,11 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.7"
+    "mongoose": "^5.10.7",
+    "mongoose-sequence": "^5.2.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
