@@ -14,7 +14,4 @@ const adminSchema = new mongoose.Schema({
 });
 
 adminSchema.plugin(AutoIncrement, { inc_field: 'admin_id' });
-const Admin = mongoose.model('Admin', adminSchema);
-module.exports = Admin;
-
-console.log(Admin);
+module.exports = mongoose.model('Admin', adminSchema);
