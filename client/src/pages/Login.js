@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 
 import { GlobalContext } from '../context/GlobalState';
 
-export const Login = () => {
+const Login = () => {
   const [id, setId] = useState('');
   const [usertype, setUserType] = useState('admin');
   const [password, setPassword] = useState('');
@@ -69,3 +69,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;

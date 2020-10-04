@@ -1,12 +1,18 @@
 import React from 'react';
-import { Login } from './pages/Login';
+import { Router } from 'react-router-dom';
 
-function App() {
+import history from './services/history';
+import Routes from './routes/Index';
+import { GlobalProvider } from './context/GlobalState';
+
+const App = () => {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <GlobalProvider>
+      <Router history={history}>
+        <Routes />
+      </Router>
+    </GlobalProvider>
   );
-}
+};
 
 export default App;
