@@ -1,5 +1,7 @@
 const Admin = require('../models/Admin');
 const bcrypt = require('bcryptjs');
+const Bug = require('../models/Bug');
+const jwt = require('jsonwebtoken');
 
 module.exports = {
   //get all admins
@@ -52,6 +54,189 @@ module.exports = {
       });
     } catch (err) {
       return res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
+  },
+
+  //GET ALL BUGS
+  getAllBugs: async (req, res) => {
+    try {
+      const token = req.header('Authorization');
+      const decoded = jwt.verify(token, process.env.JWT_KEY);
+      data = decoded;
+
+      if (data.type === 'admin') {
+        const bugs = await Bug.find({});
+
+        return res.status(200).json({
+          success: true,
+          data: bugs,
+        });
+      } else {
+        return res.status(401).json({
+          success: false,
+          message: 'unauthorized',
+        });
+      }
+    } catch (err) {
+      return res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
+  },
+
+  //ASSIGN BUG
+
+  assignBug: async (req, res) => {
+    try {
+      const { bug_id, working_emp_id, working_emp_name } = req.body;
+
+      const token = req.header('Authorization');
+      const decoded = jwt.verify(token, process.env.JWT_KEY);
+      data = decoded;
+
+      if (data.type === 'admin') {
+        const bug = await Bug.find({ bug_id: bug_id });
+
+        if (bug.length > 0) {
+          if (bug[0].bug_status === 'unassigned') {
+            const filter = { bug_id: bug_id };
+            const update = {
+              working_emp_id: working_emp_id,
+              working_emp_name: working_emp_name,
+              bug_status: 'assigned',
+            };
+
+            const doc = await Bug.findOneAndUpdate(filter, update, {
+              new: true,
+            });
+
+            return res.status(200).json({
+              success: true,
+              data: doc,
+            });
+          } else {
+            return res.status(401).json({
+              success: false,
+              message: 'already assigned the bug to one employee',
+            });
+          }
+        } else {
+          return res.status(404).json({
+            success: false,
+            message: 'bug not found',
+          });
+        }
+      } else {
+        return res.status(401).json({
+          success: false,
+          message: 'unauthorized',
+        });
+      }
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
+  },
+
+  //UNASSIGN BUG
+
+  unassignBug: async (req, res) => {
+    try {
+      const { bug_id } = req.body;
+
+      const token = req.header('Authorization');
+      const decoded = jwt.verify(token, process.env.JWT_KEY);
+      data = decoded;
+
+      if (data.type === 'admin') {
+        const bug = await Bug.find({ bug_id: bug_id });
+
+        if (bug.length > 0) {
+          if (
+            bug[0].bug_status === 'assigned' ||
+            bug[0].bug_status === 'solution not working'
+          ) {
+            const filter = { bug_id: bug_id };
+            const update = {
+              working_emp_id: 0,
+              working_emp_name: 'not assigned',
+              bug_status: 'unassigned',
+            };
+
+            const doc = await Bug.findOneAndUpdate(filter, update, {
+              new: true,
+            });
+
+            return res.status(200).json({
+              success: true,
+              data: doc,
+            });
+          } else {
+            return res.status(401).json({
+              success: false,
+              message: 'this bug is already unassigned',
+            });
+          }
+        } else {
+          return res.status(404).json({
+            success: false,
+            message: 'bug not found',
+          });
+        }
+      } else {
+        return res.status(401).json({
+          success: false,
+          message: 'unauthorized',
+        });
+      }
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        error: err.message,
+      });
+    }
+  },
+
+  // DELETE BUG
+
+  deleteBug: async (req, res) => {
+    try {
+      const { bug_id } = req.body;
+
+      const token = req.header('Authorization');
+      const decoded = jwt.verify(token, process.env.JWT_KEY);
+      data = decoded;
+
+      if (data.type === 'admin') {
+        const bug = await Bug.find({ bug_id: bug_id });
+
+        if (bug.length > 0) {
+          await Bug.remove({ bug_id: bug_id });
+
+          return res.status(200).json({
+            success: true,
+            message: 'bug has been deleted successfully',
+          });
+        } else {
+          return res.status(404).json({
+            success: false,
+            message: 'no bug found',
+          });
+        }
+      } else {
+        return res.status(401).json({
+          success: false,
+          message: 'unauthorized',
+        });
+      }
+    } catch (err) {
+      res.status(500).json({
         success: false,
         error: err.message,
       });
