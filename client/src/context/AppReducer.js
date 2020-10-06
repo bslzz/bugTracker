@@ -9,6 +9,30 @@ export default (state, action) => {
         username: action.payload.username,
         user_id: action.payload.user_id,
       };
+    case 'LOG_OUT':
+      return {
+        ...state,
+        LoggedIn: false,
+        token: '',
+        type: '',
+        username: '',
+        user_id: '',
+      };
+    case 'BUGS':
+      return {
+        ...state,
+        Bugs: action.payload,
+      };
+    case 'ADD_BUG':
+      return {
+        ...state,
+        Bugs: [...state.Bugs, action.payload],
+      };
+    case 'DELETE_BUG':
+      return {
+        ...state,
+        Bugs: state.Bugs.filter((Bug) => Bug.bug_id !== action.payload),
+      };
     case 'ERROR':
       return {
         ...state,
