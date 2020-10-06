@@ -46,9 +46,9 @@ const Admin = () => {
   return (
     <>
       <StatusBar props="Admin" />
-      <div className="bugs__container">
-        <div className="bugs__unassigned">
-          <h3 className="bugs__heading bugs__heading_unassigned">Unassigned</h3>
+      <div>
+        <div>
+          <h3>Unassigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === 'unassigned' && (
@@ -56,21 +56,19 @@ const Admin = () => {
                   key={bug.bug_id}
                   bug={bug}
                   employees={employee}
-                  className="bug__container__red"
                   dlt={dlt}
                 />
               )
           )}
         </div>
-        <div className="bugs__assigned">
-          <h3 className="bugs__heading bugs__heading_assigned">Assigned</h3>
+        <div>
+          <h3>Assigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === 'assigned' && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
-                  className="bug__container__blue"
                   unassign={unassign}
                   dlt={dlt}
                 />
@@ -82,41 +80,32 @@ const Admin = () => {
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
-                  className="bug__container__yellow"
                   unassign={unassign}
                   dlt={dlt}
                 />
               )
           )}
         </div>
-        <div className="bugs__notworking">
-          <h3 className="bugs__heading bugs__heading_notworking">
-            Solution not working
-          </h3>
+        <div>
+          <h3>Solution not working</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === 'solution not working' && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
-                  className="bug__container__orangered"
                   unassign={unassign}
                   dlt={dlt}
                 />
               )
           )}
         </div>
-        <div className="bugs__solved">
-          <h3 className="bugs__heading bugs__heading_solved">Solved</h3>
+        <div>
+          <h3>Solved</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === 'solved' && (
-                <SolvedBug
-                  key={bug.bug_id}
-                  bug={bug}
-                  className="bug__container__green"
-                  dlt={dlt}
-                />
+                <SolvedBug key={bug.bug_id} bug={bug} dlt={dlt} />
               )
           )}
         </div>

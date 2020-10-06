@@ -48,7 +48,7 @@ const Login = () => {
         <div>
           <label htmlFor="password">Password:</label>
           <input
-            type="string"
+            type="password"
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

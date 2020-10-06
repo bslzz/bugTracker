@@ -29,7 +29,7 @@ const Employee = () => {
   return (
     <>
       <StatusBar props="Employee" />
-      <div className="bugs__container">
+      <div>
         {Bugs.map((bug) => (
           <EmployeeBug key={bug.bug_id} bug={bug} solve={solve} />
         ))}
