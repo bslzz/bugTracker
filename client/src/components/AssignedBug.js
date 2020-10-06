@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const AssignedBug = (props) => {
-  const { bug, className, unassign, dlt } = props;
+  const { bug, unassign, dlt } = props;
 
   const onClick = () => {
     unassign(bug.bug_id);
@@ -13,33 +13,27 @@ export const AssignedBug = (props) => {
 
   return (
     <>
-      <div className={`bug__container ${className}`}>
+      <div>
         <p>
-          <span className="bug__titles">Client Username:</span>{' '}
-          {bug.client_username}
+          <span>Client Username:</span> {bug.client_username}
         </p>
         <p>
-          <span className="bug__titles">Project:</span> {bug.project}
+          <span>Project:</span> {bug.project}
         </p>
         <p>
-          <span className="bug__titles">Bug:</span> {bug.bug}
+          <span>Bug:</span> {bug.bug}
         </p>
         <p>
-          <span className="bug__titles">Bug Status:</span> {bug.bug_status}
+          <span>Bug Status:</span> {bug.bug_status}
         </p>
         <p>
-          <span className="bug__titles">Solution:</span> {bug.solution}
+          <span>Solution:</span> {bug.solution}
         </p>
         <p>
-          <span className="bug__titles">Working Employee:</span>{' '}
-          {bug.working_emp_name}
+          <span>Working Employee:</span> {bug.working_emp_name}
         </p>
-        <button className="bug_button bug_button_unassign" onClick={onClick}>
-          Unassign
-        </button>
-        <button className="bug_button bug_button_delete" onClick={deleteClick}>
-          Delete
-        </button>
+        <button onClick={onClick}>Unassign</button>
+        <button onClick={deleteClick}>Delete</button>
       </div>
     </>
   );

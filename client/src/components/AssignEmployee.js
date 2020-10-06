@@ -33,7 +33,6 @@ export const AssignEmployee = (props) => {
           setEmpId(e.target.value);
         }}
         placeholder="select employee"
-        className="bug_assign_select"
       >
         <option value=""> -- select an employee -- </option>
         {employees.map((emp) => (
@@ -46,7 +45,7 @@ export const AssignEmployee = (props) => {
           </option>
         ))}
       </select>
-      <button className="bug_button bug_button_assign">Assign</button>
+      <button>Assign</button>
     </form>
   );
 };

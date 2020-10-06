@@ -17,69 +17,41 @@ export const ClientBug = (props) => {
 
   return (
     <>
-      <div
-        className={
-          bug.bug_status === 'solved'
-            ? 'bug__container bug__container__green'
-            : bug.bug_status === 'unassigned'
-            ? 'bug__container bug__container__red'
-            : bug.bug_status === 'assigned'
-            ? 'bug__container bug__container__blue'
-            : bug.bug_status === 'solution is given'
-            ? 'bug__container bug__container__yellow'
-            : 'bug__container bug__container__orangered'
-        }
-      >
+      <div>
         <p>
-          <span className="bug__titles">Project:</span> {bug.project}
+          <span>Project:</span> {bug.project}
         </p>
         <p>
-          <span className="bug__titles">Bug:</span> {bug.bug}
+          <span>Bug:</span> {bug.bug}
         </p>
         <p>
-          <span className="bug__titles">Bug Status:</span> {bug.bug_status}
+          <span>Bug Status:</span> {bug.bug_status}
         </p>
         {bug.bug_status !== 'unassigned' && (
           <p>
-            <span className="bug__titles">Working Employee:</span>{' '}
-            {bug.working_emp_name}
+            <span>Working Employee:</span> {bug.working_emp_name}
           </p>
         )}
         {bug.bug_status === 'solution is given' && (
-          <div className="bug__solution__container">
+          <div>
             <p>
-              <span className="bug__titles">Solution:</span> {bug.solution}
+              <span>Solution:</span> {bug.solution}
             </p>
-            <button
-              className="bug_button bug_button_assign"
-              onClick={denyClick}
-            >
-              Deny
-            </button>
-            <button
-              className="bug_button bug_button_confirm"
-              onClick={confirmClick}
-            >
-              Confirm
-            </button>
+            <button onClick={denyClick}>Deny</button>
+            <button onClick={confirmClick}>Confirm</button>
           </div>
         )}
         {bug.bug_status === 'solved' && (
           <p>
-            <span className="bug__titles">Solution:</span> {bug.solution}
+            <span>Solution:</span> {bug.solution}
           </p>
         )}
         {bug.bug_status === 'solution not working' && (
           <p>
-            <span className="bug__titles">Solution:</span> {bug.solution}
+            <span>Solution:</span> {bug.solution}
           </p>
         )}
-        <button
-          className="bug_button bug_button_delete no_margin"
-          onClick={deleteClick}
-        >
-          Delete
-        </button>
+        <button onClick={deleteClick}>Delete</button>
       </div>
     </>
   );

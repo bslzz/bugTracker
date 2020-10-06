@@ -13,9 +13,9 @@ export const StatusBar = (props) => {
   };
 
   return (
-    <div className="statusbar">
-      <h1 className="statusbar__heading">{heading}</h1>
-      <Link onClick={onClick} className="statusbar_logout" to="#">
+    <div>
+      <h1>{heading}</h1>
+      <Link onClick={onClick} to="#">
         Log Out
       </Link>
     </div>
