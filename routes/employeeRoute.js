@@ -1,21 +1,17 @@
 const express = require('express');
 const router = express.Router();
 
-const employeeController = require('../controllers/employees');
-const checkAuth = require('../middleware/Auth');
+const check_auth = require('../middleware/Auth');
+const {
+  getEmployee,
+  getAssignedBug,
+  giveSolution,
+} = require('../controllers/employees');
 
-// GET EMPLOYEE
-router.route('/').get(employeeController.getEmployee);
+router.route('/').get(getEmployee);
 
-// REGISTER EMPLOYEE
-router.route('/employeeRegister').post(employeeController.employeeRegister);
+router.route('/getassignedbug/:id').get(check_auth, getAssignedBug);
 
-// GET ASSIGNED BUG
-router
-  .route('/getassignedbug/:id')
-  .get(checkAuth, employeeController.getAssignedBug);
-
-// GIVE SOLUTION
-router.route('/givesolution').post(checkAuth, employeeController.giveSolution);
+router.route('/givesolution').post(check_auth, giveSolution);
 
 module.exports = router;

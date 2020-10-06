@@ -1,25 +1,33 @@
 const express = require('express');
 const router = express.Router();
 
-const adminController = require('../controllers/admin');
-const checkAuth = require('../middleware/Auth');
+const check_auth = require('../middleware/Auth');
 
-//get Admin
-router.route('/').get(adminController.getAdmin);
+const {
+  getAdmins,
+  adminRegister,
+  employeeRegister,
+  clientRegister,
+  getAllBugs,
+  assignBug,
+  unassignBug,
+  deleteBug,
+} = require('../controllers/admin');
 
-//register Admin
-router.route('/register').post(adminController.adminRegister);
+router.route('/').get(getAdmins);
 
-//get all bugs
-router.route('/bugs').get(checkAuth, adminController.getAllBugs);
+router.route('/bugs').get(check_auth, getAllBugs);
 
-//assign bug
-router.route('/assignbug').post(checkAuth, adminController.assignBug);
+router.route('/assignbug').post(check_auth, assignBug);
 
-//unassign bug
-router.route('/unassignbug').post(checkAuth, adminController.unassignBug);
+router.route('/deletebug').post(check_auth, deleteBug);
 
-//delete bug
-router.route('/deletebug').post(checkAuth, adminController.deleteBug);
+router.route('/unassignbug').post(check_auth, unassignBug);
+
+router.route('/register').post(adminRegister);
+
+router.route('/employeeRegister').post(employeeRegister);
+
+router.route('/clientRegister').post(clientRegister);
 
 module.exports = router;

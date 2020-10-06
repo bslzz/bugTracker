@@ -1,30 +1,26 @@
 const express = require('express');
 const router = express.Router();
 
-const clientController = require('../controllers/client');
-const checkAuth = require('../middleware/Auth');
+const check_auth = require('../middleware/Auth');
+const {
+  getClients,
+  reportBug,
+  getBugStatus,
+  deleteBug,
+  confirmsolution,
+  denysoluton,
+} = require('../controllers/client');
 
-// GET CLIENTS
-router.route('/').get(clientController.getClients);
+router.route('/').get(getClients);
 
-//REGISTER CLIENT
-router.route('/clientRegister').post(clientController.clientRegister);
+router.route('/report_bug').post(check_auth, reportBug);
 
-// REPORT BUG
-router.route('/report_bug').post(checkAuth, clientController.reportBug);
+router.route('/delete_bug').post(check_auth, deleteBug);
 
-// DELETE BUG
-router.route('/delete_bug').post(checkAuth, clientController.deleteBug);
+router.route('/bugs/:id').get(check_auth, getBugStatus);
 
-//GET BUG STATUS
-router.route('/bugs/:id').get(checkAuth, clientController.getBugStatus);
+router.route('/confirmsolution').post(check_auth, confirmsolution);
 
-// CONFIRM SOLUTION
-router
-  .route('/confirmsolution')
-  .post(checkAuth, clientController.confirmsolution);
-
-// DENY SOLUTION / NOT WORKING
-router.route('/notworking').post(checkAuth, clientController.denysoluton);
+router.route('/notworking').post(check_auth, denysoluton);
 
 module.exports = router;
