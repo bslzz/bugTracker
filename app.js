@@ -17,5 +17,5 @@ app.use('/api/client', require('./routes/clientRoute'));
 app.use('/api/login', require('./routes/loginRoute'));
 
 //PORT
-const PORT = process.env.PORT || 7070;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
