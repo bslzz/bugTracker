@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <button onClick={login}>Login</button>
-      <button onClick={register}>Register</button>
+      <button onClick={register}>Register As Admin</button>
     </>
   );
 };
