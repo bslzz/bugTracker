@@ -50,6 +50,36 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
+  // Actions
+  async function register(body) {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    try {
+      const data = await axios.post('/api/admin/register', body, config);
+      const payload = {
+        username: body.username,
+        admin_id: data.data.data.admin_id,
+      };
+
+      localStorage.setItem('type', data.data.type);
+      localStorage.setItem('username', body.username);
+      localStorage.setItem('type_id', data.data.data.admin_id);
+
+      dispatch({
+        type: 'REGISTER',
+        payload: payload,
+      });
+    } catch (err) {
+      dispatch({
+        type: 'ERROR',
+        payload: err.response.data.error,
+      });
+    }
+  }
+
   async function loadCache() {
     try {
       if (localStorage.getItem('token')) {
@@ -368,6 +398,7 @@ export const GlobalProvider = ({ children }) => {
         error: state.error,
         loadCache,
         logIn,
+        register,
         logOut,
         getAllBugs,
         getClientBugs,

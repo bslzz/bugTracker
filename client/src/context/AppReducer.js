@@ -1,5 +1,11 @@
 export default (state, action) => {
   switch (action.type) {
+    case 'REGISTER':
+      return {
+        ...state,
+        username: action.payload.username,
+        admin_id: action.payload.admin_id,
+      };
     case 'LOG_IN':
       return {
         ...state,
