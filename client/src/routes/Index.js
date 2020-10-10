@@ -5,6 +5,7 @@ import Route from './Route';
 
 import { GlobalContext } from '../context/GlobalState';
 
+import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Admin from '../pages/Admin';
 import Employee from '../pages/Employee';
@@ -19,7 +20,8 @@ export default function Routes() {
 
   return (
     <Switch>
-      <Route path="/" exact component={Login} />
+      <Route path="/" exact component={Home} />
+      <Route path="/login" exact component={Login} />
 
       <Route path="/admin" component={Admin} isPrivate />
 
@@ -28,7 +30,7 @@ export default function Routes() {
       <Route path="/client" component={Client} isPrivate />
 
       {/* redirect user to SignIn page if route does not exist and user is not authenticated */}
-      <Route component={Login} />
+      <Route component={Home} />
     </Switch>
   );
 }
