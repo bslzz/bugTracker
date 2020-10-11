@@ -96,7 +96,7 @@ export const GlobalProvider = ({ children }) => {
 
       localStorage.setItem('type', data.data.type);
       localStorage.setItem('username', body.username);
-      localStorage.setItem('type_id', data.data.data.client_id);
+      localStorage.setItem('client_id', data.data.data.client_id);
 
       dispatch({
         type: 'REGISTER_CLIENT',
