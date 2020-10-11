@@ -46,11 +46,16 @@ const Admin = () => {
     e.preventDefault();
     history.push('/admin/clientRegister');
   };
+  const employeeRegister = (e) => {
+    e.preventDefault();
+    history.push('/admin/employeeRegister');
+  };
 
   return (
     <>
       <StatusBar props="Admin" />
       <button onClick={clientRegister}>Client Register</button>
+      <button onClick={employeeRegister}>Employee Register</button>
       <div>
         <div>
           <h3>Unassigned</h3>

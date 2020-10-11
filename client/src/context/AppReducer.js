@@ -12,6 +12,12 @@ export default (state, action) => {
         username: action.payload.username,
         client_id: action.payload.client_id,
       };
+    case 'REGISTER_EMPLOYEE':
+      return {
+        ...state,
+        username: action.payload.username,
+        employee_id: action.payload.employee_id,
+      };
     case 'LOG_IN':
       return {
         ...state,

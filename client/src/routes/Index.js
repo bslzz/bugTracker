@@ -12,6 +12,7 @@ import Employee from '../pages/Employee';
 import Client from '../pages/Client';
 import Register from '../pages/Register';
 import RegisterClient from '../pages/RegisterAsClient';
+import RegisterEmployee from '../pages/RegisterAsEmployee';
 
 export default function Routes() {
   const { loadCache } = useContext(GlobalContext);
@@ -31,6 +32,11 @@ export default function Routes() {
       <Route
         path="/admin/clientRegister"
         component={RegisterClient}
+        isPrivate
+      />
+      <Route
+        path="/admin/employeeRegister"
+        component={RegisterEmployee}
         isPrivate
       />
 

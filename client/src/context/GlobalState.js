@@ -109,6 +109,39 @@ export const GlobalProvider = ({ children }) => {
       });
     }
   }
+  // Actions REGISTER AS EMPLOYEE
+  async function registerEmployee(body) {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    try {
+      const data = await axios.post(
+        '/api/admin/employeeRegister',
+        body,
+        config
+      );
+      const payload = {
+        username: body.username,
+        employee_id: data.data.data.employee_id,
+      };
+
+      localStorage.setItem('type', data.data.type);
+      localStorage.setItem('username', body.username);
+      localStorage.setItem('employee_id', data.data.data.employee_id);
+
+      dispatch({
+        type: 'REGISTER_EMPLOYEE',
+        payload: payload,
+      });
+    } catch (err) {
+      dispatch({
+        type: 'ERROR',
+        payload: err.response.data.error,
+      });
+    }
+  }
 
   async function loadCache() {
     try {
@@ -430,6 +463,7 @@ export const GlobalProvider = ({ children }) => {
         logIn,
         register,
         registerClient,
+        registerEmployee,
         logOut,
         getAllBugs,
         getClientBugs,
