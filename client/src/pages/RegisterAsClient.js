@@ -7,7 +7,7 @@ const RegisterClient = () => {
 
   const { registerClient } = useContext(GlobalContext);
 
-  const clientId = JSON.parse(localStorage.getItem('type_id') + 1);
+  const clientId = localStorage.getItem('client_id', 'value');
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const RegisterClient = () => {
     try {
       const body = { username, password };
       registerClient(body);
-      alert(`Your id is ${clientId}`);
+      alert(`Your id is ${+clientId + 1}`);
     } catch (error) {
       console.log(error);
     }

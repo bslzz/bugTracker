@@ -8,7 +8,7 @@ const Register = () => {
 
   const { register } = useContext(GlobalContext);
 
-  const adminId = JSON.parse(localStorage.getItem('type_id')) + 1;
+  const adminId = localStorage.getItem('type_id', 'value');
   const history = useHistory();
 
   const submitForm = async (e) => {
@@ -17,7 +17,7 @@ const Register = () => {
     try {
       const body = { username, password };
       register(body);
-      alert(`Your id is ${adminId}`);
+      alert(`Your id is ${+adminId + 1}`);
       history.push('/login');
     } catch (error) {
       console.log(error);
