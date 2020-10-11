@@ -42,10 +42,15 @@ const Admin = () => {
     };
     deleteBug(body);
   };
+  const clientRegister = (e) => {
+    e.preventDefault();
+    history.push('/admin/clientRegister');
+  };
 
   return (
     <>
       <StatusBar props="Admin" />
+      <button onClick={clientRegister}>Client Register</button>
       <div>
         <div>
           <h3>Unassigned</h3>

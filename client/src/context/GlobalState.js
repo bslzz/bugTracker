@@ -50,7 +50,7 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  // Actions
+  // Actions REGISTER AS ADMIN
   async function register(body) {
     const config = {
       headers: {
@@ -70,6 +70,36 @@ export const GlobalProvider = ({ children }) => {
 
       dispatch({
         type: 'REGISTER',
+        payload: payload,
+      });
+    } catch (err) {
+      dispatch({
+        type: 'ERROR',
+        payload: err.response.data.error,
+      });
+    }
+  }
+
+  // Actions REGISTER AS CLIENT
+  async function registerClient(body) {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    try {
+      const data = await axios.post('/api/admin/clientRegister', body, config);
+      const payload = {
+        username: body.username,
+        client_id: data.data.data.client_id,
+      };
+
+      localStorage.setItem('type', data.data.type);
+      localStorage.setItem('username', body.username);
+      localStorage.setItem('type_id', data.data.data.client_id);
+
+      dispatch({
+        type: 'REGISTER_CLIENT',
         payload: payload,
       });
     } catch (err) {
@@ -399,6 +429,7 @@ export const GlobalProvider = ({ children }) => {
         loadCache,
         logIn,
         register,
+        registerClient,
         logOut,
         getAllBugs,
         getClientBugs,
