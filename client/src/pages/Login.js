@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 
+
 import { GlobalContext } from '../context/GlobalState';
 
 const Login = () => {
@@ -21,7 +22,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="test">
       <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="type">Type:</label>

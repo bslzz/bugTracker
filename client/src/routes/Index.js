@@ -13,6 +13,8 @@ import Client from '../pages/Client';
 import Register from '../pages/Register';
 import RegisterClient from '../pages/RegisterAsClient';
 import RegisterEmployee from '../pages/RegisterAsEmployee';
+import LandingPage from '../pages/LandingPage';
+
 
 export default function Routes() {
   const { loadCache } = useContext(GlobalContext);
@@ -23,7 +25,7 @@ export default function Routes() {
 
   return (
     <Switch>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={LandingPage} />
 
       <Route path="/login" component={Login} />
 
