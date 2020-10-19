@@ -18,7 +18,7 @@ const Home = () => {
       <Container>
         <div className="button-container">
           <div className="button-card">
-            <h4 className="register-head">REGISTER AS ADMIN</h4>
+            {/* <h4 className="register-head">REGISTER AS ADMIN</h4> */}
             <div className="button-wrapper">
               <div>
                 <button onClick={login} className="login-button">

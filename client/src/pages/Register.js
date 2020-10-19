@@ -27,12 +27,19 @@ const Register = () => {
   return (
     <section>
       <div>
-        <h1>Register</h1>
+        <h1>Register As Admin</h1>
       </div>
       <div>
         <div>
           <div>
             <form onSubmit={submitForm}>
+              <div>
+                <label htmlFor="exampleText">Company Email</label>
+                <input
+                  type="text"
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
               <div>
                 <label htmlFor="exampleText">Username</label>
                 <input

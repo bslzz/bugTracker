@@ -7,12 +7,11 @@ const Navbars = () => {
     
     // handle navbar hamburger toggle 
     const handleClick = () => setClick(!click);
-    const closeMobileMenu = ()=> setClick(false)
+    // const closeMobileMenu = ()=> setClick(false)
   return (
-    // <div className="navbar-container">
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        EPIC
+        Logo
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -20,13 +19,18 @@ const Navbars = () => {
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <Link to="/login" className="nav-links">
-            Login
+          <Link to="#features" id="nav_link">
+            Features
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/register" className="nav-links">
-            Register as Admin
+          <Link to="#guide" id="nav_link">
+            Product guide
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/features" className="nav-links  nav-links-mobile">
+            SignUp
           </Link>
         </li>
       </ul>
