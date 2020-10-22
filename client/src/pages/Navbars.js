@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbars.scss";
 
 const Navbars = () => {
-    const [click, setClick] = useState(false);
-    
-    // handle navbar hamburger toggle 
-    const handleClick = () => setClick(!click);
-    // const closeMobileMenu = ()=> setClick(false)
+  const [click, setClick] = useState(false);
+
+  // handle navbar hamburger toggle
+  const handleClick = () => setClick(!click);
+  // const closeMobileMenu = ()=> setClick(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+  }, []);
+
+  const checkScroll = () => {
+    const navbars = document.getElementById("navbars");
+    const page = window.pageYOffset >= 620;
+    if (page) {
+      navbars.classList.add("sticky");
+    } else {
+      navbars.classList.remove("sticky");
+    }
+  };
   return (
-    <nav className="navbar">
-      <Link to="/" className="navbar-logo">
+    <nav className="navbar" id="navbars">
+      <Link to="/" className="navbar-logo-mobile">
         Logo
       </Link>
       <div className="menu-icon" onClick={handleClick}>

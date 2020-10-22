@@ -17,6 +17,15 @@
   text-decoration: none;
   font-size: 2rem;
 }
+.navbar-logo-mobile{
+  color: $button-background;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+
+  }
 
 .nav-menu {
   display: grid;
@@ -41,6 +50,22 @@
   padding: 0.5rem 1rem;
 }
 
+#navbars {
+  border-radius: 2px;
+  background: yellow;
+ 
+  // border-top: 100px solid tomato;
+  // border-left: 0px solid transparent;
+  // border-right: 170px solid transparent;
+  // border-bottom: 30px solid transparent;
+  height: 80px;
+  width: 100%;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
 // .nav-links:hover {
 //   background-color: #1888ff;
 //   border-radius: 4px;
@@ -106,6 +131,8 @@
     left: 0;
     transform: translate(25%, 50%);
   }
+
+  
 
   .menu-icon {
     display: block;

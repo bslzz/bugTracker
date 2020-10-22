@@ -1,17 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbars from "./Navbars";
+import { Link } from "react-router-dom";
 
-import "./LandingPage.scss"
+//assets
+import hero from "./../assets/land.svg";
+import info from "./../assets/info.svg";
+
+import "./LandingPage.scss";
 
 const LandingPage = () => {
+
+
   return (
     <div>
-      <Navbars />
-      <section className="about-app-features" id="features">
-        <li>Submit</li>
-        <li>Track </li>
-        <li> Resolve Issues </li>
+      {/* Hero banner */}
+      <section className="hero-banner-container">
+        <div className="content-wrapper">
+          <div>
+            <Link to="/" className="navbar-logo">
+              Logo
+            </Link>
+            <h1 className="hero-banner-intro">
+              <br />
+              Software BugTracker for <br />
+              your every project
+            </h1>
+          </div>
+
+          <img src={hero} className="hero-banner-image" />
+        </div>
       </section>
+
+      {/* Section 2 */}
+      <div className="nav-wrap">
+        <Navbars />
+      </div>
+
+      <section className="about-app-features">
+        <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+        <div>
+          <ul className="info-list">
+            <li>Submit</li>
+            <li>Track </li>
+            <li> Resolve Issues </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="about-app-features">
+        <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+        <div>
+          <ul className="info-list">
+            <li>Submit</li>
+            <li>Track </li>
+            <li> Resolve Issues </li>
+          </ul>
+        </div>
+      </section>
+      <section className="about-app-features">
+        <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+        <div>
+          <ul className="info-list">
+            <li>Submit</li>
+            <li>Track </li>
+            <li> Resolve Issues </li>
+          </ul>
+        </div>
+      </section>
+      <section className="about-app-features">
+        <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+        <div>
+          <ul className="info-list">
+            <li>Submit</li>
+            <li>Track </li>
+            <li> Resolve Issues </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Section 3 */}
       <section className="more-app-info" id="guide">
         <div>
           <img src="" alt="demo-video" />
@@ -25,7 +92,6 @@ const LandingPage = () => {
           </p>
         </div>
       </section>
-      
     </div>
   );
 };
