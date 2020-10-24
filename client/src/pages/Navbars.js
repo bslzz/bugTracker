@@ -15,7 +15,7 @@ const Navbars = () => {
 
   const checkScroll = () => {
     const navbars = document.getElementById("navbars");
-    const page = window.pageYOffset >= 620;
+    const page = window.pageYOffset >= 720;
     if (page) {
       navbars.classList.add("sticky");
     } else {
