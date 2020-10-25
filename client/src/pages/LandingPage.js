@@ -12,6 +12,10 @@ import { IconContext } from "react-icons";
 //assets
 import hero from "./../assets/land.svg";
 import info from "./../assets/info.svg";
+import analytics from "./../assets/analytics.svg";
+import assign from "./../assets/assign.svg";
+import search from "./../assets/search.svg";
+import statistics from "./../assets/statistics.svg";
 
 import "./LandingPage.scss";
 
@@ -93,22 +97,23 @@ const LandingPage = () => {
           <h2 className="sub-heads">Bug Tracking</h2>
           <div className="featured-works">
             <img
-              src={info}
+              src={analytics}
+              className="featured-works-image"
+              alt="featured-works-image"
+            />
+         
+            <img
+              src={assign}
               className="featured-works-image"
               alt="featured-works-image"
             />
             <img
-              src={info}
+              src={search}
               className="featured-works-image"
               alt="featured-works-image"
             />
             <img
-              src={info}
-              className="featured-works-image"
-              alt="featured-works-image"
-            />
-            <img
-              src={info}
+              src={statistics}
               className="featured-works-image"
               alt="featured-works-image"
             />

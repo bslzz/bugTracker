@@ -43,6 +43,10 @@
   height: 80px;
 }
 
+#nav_link {
+  text-decoration: none;
+}
+
 .nav-links {
   color: $button-background;
   text-decoration: none;
@@ -52,14 +56,14 @@
 #navbars {
   border-radius: 2px;
   background: yellow;
+  top: 0;
   height: 80px;
   width: 100%;
 }
 .sticky {
   position: fixed;
-  top: 0;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  transition: all 2s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 // .nav-links:hover {
 //   background-color: #1888ff;

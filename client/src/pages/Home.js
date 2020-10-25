@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory,Link } from 'react-router-dom';
 
 import "./Home.scss"
 import { Container } from "react-bootstrap";
@@ -16,6 +16,9 @@ const Home = () => {
   return (
     <>
       <Container>
+        <Link to="/" className="navbar-logo">
+          Logo
+        </Link>
         <div className="button-container">
           <div className="button-card">
             {/* <h4 className="register-head">REGISTER AS ADMIN</h4> */}
