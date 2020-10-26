@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { useHistory } from 'react-router-dom';
+import "./Register.scss"
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -26,37 +27,43 @@ const Register = () => {
 
   return (
     <section>
+      <div>{/* <h1>Register As Admin</h1> */}</div>
       <div>
-        <h1>Register As Admin</h1>
-      </div>
-      <div>
-        <div>
-          <div>
-            <form onSubmit={submitForm}>
+        <div className="register-form-wrapper">
+          <div className="register-container">
+            <form onSubmit={submitForm} className="register-form">
               <div>
                 <label htmlFor="exampleText">Company Email</label>
-                <input
-                  type="text"
-                  onChange={(e) => setUsername(e.target.value)}
-                />
+                <div>
+                  <input
+                    type="text"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </div>
               </div>
               <div>
                 <label htmlFor="exampleText">Username</label>
-                <input
-                  type="text"
-                  onChange={(e) => setUsername(e.target.value)}
-                />
+                <div>
+                  <input
+                    type="text"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </div>
               </div>
 
               <div>
                 <label htmlFor="exampleInputPassword1">Password</label>
-                <input
-                  type="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
+                <div>
+                  <input
+                    type="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
               </div>
 
-              <button type="submit">Register</button>
+              <button type="submit" className="registers-button">
+                Register
+              </button>
             </form>
           </div>
         </div>

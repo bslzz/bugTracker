@@ -1,0 +1,45 @@
+@import "../styles/scss/variables.scss";
+
+.test {
+  display: flex;
+  justify-content: center;
+  margin: 15rem auto;
+  width: 40rem;
+  height: 400px;
+  border-radius: 10px;
+  background: #ffffff;
+ 
+}
+// .login-heads {
+// display:flex;
+// justify-content: center;
+// align-content: center;
+
+// }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  //   padding: 4rem;
+}
+.page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.option-input {
+  outline: none;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 3px;
+  border: 1px solid rgb(82, 80, 80);
+}
+
+
+.logins-button {
+    margin: 2rem;
+  cursor: pointer;
+}
