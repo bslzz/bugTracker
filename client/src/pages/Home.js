@@ -3,6 +3,7 @@ import { useHistory,Link } from 'react-router-dom';
 
 import "./Home.scss"
 import { Container } from "react-bootstrap";
+import Logo from '../components/Logo';
 
 const Home = () => {
   const history = useHistory();
@@ -16,9 +17,7 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Link to="/" className="navbar-logo">
-          Logo
-        </Link>
+     <Logo/>
         <div className="button-container">
           <div className="button-card">
             {/* <h4 className="register-head">REGISTER AS ADMIN</h4> */}

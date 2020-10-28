@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbars from "./Navbars";
 import { Link } from "react-router-dom";
 
@@ -18,36 +18,36 @@ import search from "./../assets/search.svg";
 import statistics from "./../assets/statistics.svg";
 
 import "./LandingPage.scss";
+import Logo from "../components/Logo";
 
 const LandingPage = () => {
   return (
     <div>
       {/* Hero banner */}
-      <section className="hero-banner-container">
-        <div className="content-wrapper">
-          <div>
-            <Link to="/" className="navbar-logo">
-              Logo
-            </Link>
-            <div>
+      <div className="hero-background">
+        <Logo />
+        <section className="hero-banner-container">
+          <div className="content-wrapper">
+            <div className="content-wrapper-inner">
               <h1 className="hero-banner-intro">
                 <br />
-                Software BugTracker for <br />
-                your every project
+                Software BugTracker for your every project
               </h1>
-
-              <button className="call-to-action">SignUp</button>
+              <Link to="/features">
+                <button className="call-to-action">SignUp</button>
+              </Link>
             </div>
-          </div>
 
-          <img src={hero} className="hero-banner-image" />
-        </div>
-      </section>
+            <img src={hero} className="hero-banner-image" />
+          </div>
+        </section>
+      </div>
 
       {/* Section 2 */}
       <div className="nav-wrap">
         <Navbars />
       </div>
+      <h2 className="product-features">Features</h2>
       <div className="more-leads-wrap">
         <p className="more-leads">
           Sourcetree simplifies how you interact with your Git repositories so
@@ -55,7 +55,7 @@ const LandingPage = () => {
           through Sourcetree's simple Git GUI.
         </p>
       </div>
-      <hr className="underline" />
+      {/* <hr className="underline" /> */}
 
       {/* Section 3 */}
       <section className="about-app-features">
@@ -101,7 +101,7 @@ const LandingPage = () => {
               className="featured-works-image"
               alt="featured-works-image"
             />
-         
+
             <img
               src={assign}
               className="featured-works-image"
@@ -122,7 +122,7 @@ const LandingPage = () => {
       </section>
 
       {/* Footer */}
-      
+
       <footer className="footer">
         <div className="footer-words">
           <ul>

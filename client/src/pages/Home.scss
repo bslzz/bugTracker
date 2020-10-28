@@ -7,17 +7,22 @@
   height: $button-height;
   font-size: $button-font-size;
   font-weight: $font-weight;
-  background-color: $button-background;
+  background-color: #27224a;
   color: $button-font-color;
   border-radius: 5px;
   border: none;
   cursor: pointer;
 }
 
+.login-button:hover, .register-button:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
 .button-container {
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin: 20rem;
+  margin: 10rem auto;
 }
 
 .button-wrapper {
@@ -32,11 +37,10 @@
 }
 
 .button-card {
-  width: 50rem;
+  width: 35rem;
   height: 300px;
   border-radius: 10px;
-  background: $card-colors;
- 
+  background: $background-color;
 }
 
 .register-head {
@@ -44,4 +48,5 @@
 }
 .register-message {
   text-align: center;
+   color: #27224a;
 }

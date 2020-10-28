@@ -1,37 +1,47 @@
 @import "../styles/scss/variables.scss";
 
 // Hero banner
+
+.hero-background {
+  background: $background-color;
+}
 .hero-banner-container {
   display: flex;
+
   // height: 80vh;
 }
 .content-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin: 4rem;
+  margin: 5rem 10rem;
 }
+
 .hero-banner-image {
   display: flex;
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .hero-banner-intro {
   font-size: 2.5em;
-  // padding: 3rem 0rem;
+  padding: 2rem 0rem;
+  color: #27224a;
 }
+
 .call-to-action {
-  background: rgb(166, 114, 233);
-  width: 8rem;
-  height: 2.5rem;
+  background: #27224a;
+  width: 10rem;
+  height: 3rem;
   text-align: center;
   border-radius: 5px;
   color: white;
+  font-size: 20px;
   border: none;
   outline: none;
 }
 .call-to-action:hover {
   cursor: pointer;
+  filter: brightness(120%);
 }
 // Section 2
 .about-app-features {
@@ -39,7 +49,6 @@
   justify-content: center;
   align-items: center;
   // height: 25vh;
- 
 }
 .bug-trackers {
   display: flex;
@@ -50,8 +59,15 @@
   margin: 0 auto;
 }
 
+.product-features {
+  padding-top: 1rem;
+  text-align: center;
+  color: $heading-color;
+}
+
 .support-message {
   width: 25rem;
+  color: #27224a;
 }
 
 .nav-wrap {
@@ -66,8 +82,6 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-
-   
 }
 
 .info-list li {
@@ -85,9 +99,10 @@
 }
 
 .more-leads {
-  padding: 7rem 0rem 0rem 0rem;
+  // padding: 2rem 0rem 0rem 0rem;
   width: 50rem;
   text-align: center;
+  color: #27224a;
 }
 .more-leads-wrap {
   display: flex;
@@ -106,6 +121,7 @@
   justify-content: center;
   align-items: center;
   height: 40vh;
+  color: #27224a;
 }
 .sub-heads {
   text-align: center;
@@ -138,6 +154,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 5rem;
+  color:  #ffffff;
 }
 .footer-words li {
   list-style-type: none;

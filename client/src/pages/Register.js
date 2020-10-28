@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { useHistory } from 'react-router-dom';
 import "./Register.scss"
+import Logo from '../components/Logo';
 
 const Register = () => {
   const [username, setUsername] = useState('');
@@ -28,6 +29,7 @@ const Register = () => {
   return (
     <section>
       <div>{/* <h1>Register As Admin</h1> */}</div>
+      <Logo />
       <div>
         <div className="register-form-wrapper">
           <div className="register-container">
@@ -36,8 +38,10 @@ const Register = () => {
                 <label htmlFor="exampleText">Company Email</label>
                 <div>
                   <input
+                    className="input-text"
                     type="text"
                     onChange={(e) => setUsername(e.target.value)}
+                    placeholder="buggy@gmail.com"
                   />
                 </div>
               </div>
@@ -45,8 +49,10 @@ const Register = () => {
                 <label htmlFor="exampleText">Username</label>
                 <div>
                   <input
+                    className="input-text"
                     type="text"
                     onChange={(e) => setUsername(e.target.value)}
+                    placeholder="admin"
                   />
                 </div>
               </div>
@@ -55,14 +61,16 @@ const Register = () => {
                 <label htmlFor="exampleInputPassword1">Password</label>
                 <div>
                   <input
+                    className="input-text"
                     type="password"
                     onChange={(e) => setPassword(e.target.value)}
+                    placeholder="password"
                   />
                 </div>
               </div>
 
               <button type="submit" className="registers-button">
-                Register
+                Register As Admin
               </button>
             </form>
           </div>

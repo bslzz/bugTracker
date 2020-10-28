@@ -3,12 +3,11 @@
 .test {
   display: flex;
   justify-content: center;
-  margin: 15rem auto;
+  margin: 10rem auto;
   width: 40rem;
   height: 400px;
   border-radius: 10px;
-  background: #ffffff;
- 
+  background: $background-color;
 }
 // .login-heads {
 // display:flex;
@@ -16,6 +15,9 @@
 // align-content: center;
 
 // }
+.type-text {
+  color: #27224a;
+}
 
 .form-container {
   display: flex;
@@ -23,7 +25,6 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  //   padding: 4rem;
 }
 .page-container {
   display: flex;
@@ -36,10 +37,33 @@
   height: 2rem;
   border-radius: 3px;
   border: 1px solid rgb(82, 80, 80);
+
+}
+
+.logins-button {
+  margin: 2rem;
+  cursor: pointer;
 }
 
 
-.logins-button {
-    margin: 2rem;
+.logins-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
   cursor: pointer;
+  background: #27224a;
+  width: 15rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.logins-button:hover {
+  cursor: pointer;
+  filter: brightness(120%);
 }

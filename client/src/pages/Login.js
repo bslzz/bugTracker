@@ -3,6 +3,7 @@ import './Login.scss';
 
 
 import { GlobalContext } from '../context/GlobalState';
+import Logo from '../components/Logo';
 
 const Login = () => {
   const [id, setId] = useState('');
@@ -23,66 +24,69 @@ const Login = () => {
   };
 
   return (
-    <div className="page-container">
-      <div className="test">
-        {/* <h2 className="login-heads">Login</h2> */}
-        <form onSubmit={onSubmit} className="form-container">
-          {/* <div className="form-wrapper"> */}
-          {/* <div> */}
-          <div>
-            <label htmlFor="type" className="type-text">
-              Type:
-            </label>
+    <>
+      <Logo />
+      <div className="page-container">
+        <div className="test">
+          {/* <h2 className="login-heads">Login</h2> */}
+          <form onSubmit={onSubmit} className="form-container">
+            {/* <div className="form-wrapper"> */}
+            {/* <div> */}
             <div>
-              <select
-                className="option-input"
-                name="type"
-                value={usertype}
-                onChange={(e) => setUserType(e.target.value)}
-              >
-                <option value="admin">Admin</option>
-                <option value="employee">Employee</option>
-                <option value="client">Client</option>
-              </select>
+              <label htmlFor="type" className="type-text">
+                Type:
+              </label>
+              <div>
+                <select
+                  className="option-input"
+                  name="type"
+                  value={usertype}
+                  onChange={(e) => setUserType(e.target.value)}
+                >
+                  <option value="admin">Admin</option>
+                  <option value="employee">Employee</option>
+                  <option value="client">Client</option>
+                </select>
+              </div>
             </div>
-          </div>
 
-          {/* </div> */}
-          <div>
-            <label htmlFor="id" className="type-text">
-              Id:
-            </label>
+            {/* </div> */}
             <div>
-              <input
-                className="option-input"
-                type="number"
-                name="id"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-                placeholder="Enter UserId..."
-              />
+              <label htmlFor="id" className="type-text">
+                Id:
+              </label>
+              <div>
+                <input
+                  className="option-input"
+                  type="number"
+                  name="id"
+                  value={id}
+                  onChange={(e) => setId(e.target.value)}
+                  placeholder="Enter UserId..."
+                />
+              </div>
             </div>
-          </div>
-          <div>
-            <label htmlFor="password" className="type-text">
-              Password:
-            </label>
             <div>
-              <input
-                className="option-input"
-                type="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter Password..."
-              />
+              <label htmlFor="password" className="type-text">
+                Password:
+              </label>
+              <div>
+                <input
+                  className="option-input"
+                  type="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter Password..."
+                />
+              </div>
             </div>
-          </div>
-          <button className="logins-button">Login</button>
-          {/* </div> */}
-        </form>
+            <button className="logins-button">Login</button>
+            {/* </div> */}
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

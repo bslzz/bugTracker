@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../components/Logo";
+
 import "./Navbars.scss";
 
 const Navbars = () => {
   const [click, setClick] = useState(false);
+  const [sticky, setSticky] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
 
   // handle navbar hamburger toggle
   const handleClick = () => setClick(!click);
@@ -12,21 +16,46 @@ const Navbars = () => {
   useEffect(() => {
     window.addEventListener("scroll", checkScroll);
   }, []);
+  //show/hide logo
+  useEffect(() => {
+    window.addEventListener("scroll", checkLogo);
+  }, []);
+  const checkLogo = () => {
+    const logos = window.pageYOffset >= 800;
+    return logos ? setShowLogo(true) : setShowLogo(false);
+  };
+
+  const logoShow = () => {
+    if (showLogo) {
+      return {
+        color: "white",
+      };
+    } else
+      return {
+        visibility: "hidden",
+       
+      };
+  };
 
   const checkScroll = () => {
-    const navbars = document.getElementById("navbars");
-    const page = window.pageYOffset >= 720;
-    if (page) {
-      navbars.classList.add("sticky");
-    } else {
-      navbars.classList.remove("sticky");
+    const page = window.pageYOffset >= 800;
+    return page ? setSticky(true) : setSticky(false);
+  };
+
+  //sticky navbar
+  const navBarStyle = () => {
+    if (sticky) {
+      return {
+        position: "fixed",
+        width: "100%",
+        transition: "all 3s ease-in-out",
+      };
     }
   };
+
   return (
-    <nav className="navbar" id="navbars">
-      <Link to="/" className="navbar-logo-mobile">
-        Logo
-      </Link>
+    <nav className="navbar" id="navbars" style={navBarStyle() || logoShow()}>
+      <Logo />
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
       </div>
@@ -43,7 +72,11 @@ const Navbars = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="/features" className="nav-links  nav-links-mobile">
+          <Link
+            to="/features"
+            // className="nav-links  nav-links-mobile"
+            id="nav_link"
+          >
             SignUp
           </Link>
         </li>
