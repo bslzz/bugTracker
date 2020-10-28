@@ -11,6 +11,7 @@
   width: 40rem;
   height: 400px;
   border-radius: 10px;
+
   background: $background-color;
 }
 
@@ -26,20 +27,22 @@
   align-items: center;
   margin: 2rem;
   cursor: pointer;
-  background: #27224a;
+  border: 1px solid #27224a;
+  color: #27224a;
+  outline: none;
   width: 15rem;
   height: 3rem;
   text-align: center;
-  border-radius: 5px;
-  color: white;
+  background: $background-color;
+  border-radius: 25px;
   font-size: 20px;
-  border: none;
   outline: none;
 }
 
 .registers-button:hover {
   cursor: pointer;
-  filter: brightness(120%);
+  background: #27224a;
+  color: white;
 }
 .input-text {
   padding: 0.5rem;

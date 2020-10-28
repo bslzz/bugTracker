@@ -7,16 +7,21 @@
   height: $button-height;
   font-size: $button-font-size;
   font-weight: $font-weight;
-  background-color: #27224a;
   color: $button-font-color;
-  border-radius: 5px;
+  border-radius: 25px;
   border: none;
+  color: #27224a;
   cursor: pointer;
+  border: 1px solid #27224a;
+  background: $background-color;
+  outline: none;
 }
 
-.login-button:hover, .register-button:hover {
+.login-button:hover,
+.register-button:hover {
   cursor: pointer;
-  filter: brightness(120%);
+  background: #27224a;
+  color: white;
 }
 
 .button-container {
@@ -48,5 +53,5 @@
 }
 .register-message {
   text-align: center;
-   color: #27224a;
+  color: #27224a;
 }

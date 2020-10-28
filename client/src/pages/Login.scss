@@ -52,18 +52,20 @@
   align-items: center;
   margin: 2rem;
   cursor: pointer;
-  background: #27224a;
+ background: $background-color;
   width: 15rem;
   height: 3rem;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 25px;
   color: white;
   font-size: 20px;
-  border: none;
   outline: none;
+  border: 1px solid #27224a;
+  color: #27224a;
 }
 
 .logins-button:hover {
-  cursor: pointer;
-  filter: brightness(120%);
+ cursor: pointer;
+  background: #27224a;
+  color: white;
 }
