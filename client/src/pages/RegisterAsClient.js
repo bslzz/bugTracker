@@ -14,6 +14,7 @@ const RegisterClient = () => {
 
     try {
       const body = { username, password };
+      console.log(body);
       registerClient(body);
       alert(`Your id is ${+clientId + 1}`);
     } catch (error) {
