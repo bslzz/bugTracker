@@ -54,8 +54,15 @@ const Admin = () => {
   return (
     <>
       <StatusBar props="Admin" />
-      <button onClick={clientRegister}>Client Register</button>
-      <button onClick={employeeRegister}>Employee Register</button>
+      <div className="adminBtn">
+        <button className="clientRegisterBtn" onClick={clientRegister}>
+          Client Register
+        </button>
+        <button className="clientRegisterBtn" onClick={employeeRegister}>
+          Employee Register
+        </button>
+      </div>
+
       <div className="bugs__container">
         <div className="bugs__unassigned">
           <h3 className="bugs__heading bugs__heading_unassigned">Unassigned</h3>
