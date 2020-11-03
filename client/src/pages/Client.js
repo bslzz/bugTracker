@@ -58,7 +58,7 @@ const Client = () => {
     <>
       <StatusBar props="Client" />
       <ReportBug report={report} />
-      <div>
+      <div className="bugs__container">
         {Bugs.map((bug) => (
           <ClientBug
             key={bug.bug_id}
