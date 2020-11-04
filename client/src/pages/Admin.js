@@ -54,10 +54,14 @@ const Admin = () => {
 
   return (
     <Fragment>
-      <Logo/>
+      <Logo />
       <StatusBar props="Admin" />
-      <button onClick={clientRegister}>Client Register</button>
-      <button onClick={employeeRegister}>Employee Register</button>
+      <button onClick={clientRegister} className="registers-button">
+        Client Register
+      </button>
+      <button onClick={employeeRegister} className="registers-button">
+        Employee Register
+      </button>
       <div>
         <div>
           <h3>Unassigned</h3>
