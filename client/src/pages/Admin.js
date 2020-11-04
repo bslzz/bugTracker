@@ -1,10 +1,11 @@
 import React, { useEffect, useContext, useState, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import "./Admin.scss"
 
 import { GlobalContext } from '../context/GlobalState';
 
-import { StatusBar } from '../components/StatusBar';
+import { StatusBarAdmin } from '../components/StatusBarAdmin';
 import { SolvedBug } from '../components/SolvedBug';
 import { UnAssignedBug } from '../components/UnassignedBug';
 import { AssignedBug } from '../components/AssignedBug';
@@ -43,27 +44,14 @@ const Admin = () => {
     };
     deleteBug(body);
   };
-  const clientRegister = (e) => {
-    e.preventDefault();
-    history.push('/admin/clientRegister');
-  };
-  const employeeRegister = (e) => {
-    e.preventDefault();
-    history.push('/admin/employeeRegister');
-  };
+ 
 
   return (
     <Fragment>
-      <Logo />
-      <StatusBar props="Admin" />
-      <button onClick={clientRegister} className="registers-button">
-        Client Register
-      </button>
-      <button onClick={employeeRegister} className="registers-button">
-        Employee Register
-      </button>
-      <div>
-        <div>
+      <StatusBarAdmin props="Admin" />
+
+      <div className="admin-container">
+        <div className="unassigned-card">
           <h3>Unassigned</h3>
           {Bugs.map(
             (bug) =>
@@ -77,7 +65,7 @@ const Admin = () => {
               )
           )}
         </div>
-        <div>
+        <div className="unassigned-card">
           <h3>Assigned</h3>
           {Bugs.map(
             (bug) =>
@@ -102,7 +90,7 @@ const Admin = () => {
               )
           )}
         </div>
-        <div>
+        <div className="unassigned-card">
           <h3>Solution not working</h3>
           {Bugs.map(
             (bug) =>
@@ -116,7 +104,7 @@ const Admin = () => {
               )
           )}
         </div>
-        <div>
+        <div className="unassigned-card">
           <h3>Solved</h3>
           {Bugs.map(
             (bug) =>

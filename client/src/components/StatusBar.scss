@@ -1,0 +1,57 @@
+@import "../styles/scss/variables.scss";
+
+.backend-nav {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.backend-nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+  width: 95%;
+  align-items: center;
+  max-width: 3000px;
+}
+.backend-nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backend-nav-wrapper h1 {
+  color: #fc4463;
+}
+
+.logout-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 6rem;
+  height: 2.5rem;
+  background: #fc4463;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+
+.logout-button:hover {
+  filter: brightness(120%);
+}
+
+.admin-button {
+  text-decoration: none;
+  padding: 1rem;
+  color: #27224a;
+  font-weight: 800;
+}
+
+.admin-button:hover {
+  color: #fc4463;
+  filter: brightness(120%);
+}

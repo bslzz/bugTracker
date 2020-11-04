@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, Fragment } from "react";
+import { Link } from "react-router-dom";
 
-import { GlobalContext } from '../context/GlobalState';
+import "./StatusBar.scss";
+
+import { GlobalContext } from "../context/GlobalState";
+import Logo from "./Logo";
 
 export const StatusBar = (props) => {
   const { logOut } = useContext(GlobalContext);
@@ -13,11 +16,16 @@ export const StatusBar = (props) => {
   };
 
   return (
-    <div>
-      <h1>{heading}</h1>
-      <Link onClick={onClick} to="#">
-        Log Out
-      </Link>
-    </div>
+    <Fragment>
+      <nav className="backend-nav">
+        <header className="backend-nav-wrapper">
+          <h1>{heading}</h1>
+          <Logo />
+          <Link onClick={onClick} to="#" className="logout-button">
+            Log Out
+          </Link>
+        </header>
+      </nav>
+    </Fragment>
   );
 };
