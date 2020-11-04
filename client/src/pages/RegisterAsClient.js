@@ -36,7 +36,9 @@ const RegisterClient = () => {
           <form onSubmit={submitForm} className="register-form">
             <h2 className="login-message">Register Client </h2>
             <div>
-              <label htmlFor="exampleText">Username :</label>
+              <label htmlFor="exampleText" className="type-text">
+                Username :
+              </label>
               <div>
                 <input
                   className="input-text"
@@ -47,7 +49,9 @@ const RegisterClient = () => {
             </div>
 
             <div>
-              <label htmlFor="exampleInputPassword1">Password :</label>
+              <label htmlFor="exampleInputPassword1" className="type-text">
+                Password :
+              </label>
               <div>
                 <input
                   className="input-text"

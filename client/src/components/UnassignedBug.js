@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 import { AssignEmployee } from '../components/AssignEmployee';
+import {RiDeleteBin6Fill} from "react-icons/ri"
 
 export const UnAssignedBug = (props) => {
   const { bug, employees, dlt } = props;
@@ -12,23 +14,25 @@ export const UnAssignedBug = (props) => {
   return (
     <>
       <div>
-        <p>
+        <p className="report-fonts">
           <span>Client Username:</span> {bug.client_username}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Project:</span> {bug.project}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug:</span> {bug.bug}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug Status:</span> {bug.bug_status}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Solution:</span> {bug.solution}
         </p>
-        <AssignEmployee employees={employees} bug_id={bug.bug_id} />
-        <button onClick={onClick}>Delete</button>
+        <div>
+          <AssignEmployee employees={employees} bug_id={bug.bug_id} />
+          <div onClick={onClick} className="delete-bin"><RiDeleteBin6Fill/></div>
+        </div>
       </div>
     </>
   );

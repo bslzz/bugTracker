@@ -56,18 +56,20 @@ const Client = () => {
 
   return (
     <Fragment>
-      <StatusBar props="Client" />
-      <ReportBug report={report} />
-      <div>
-        {Bugs.map((bug) => (
-          <ClientBug
-            key={bug.bug_id}
-            bug={bug}
-            dlt={dlt}
-            deny={deny}
-            confirm={confirm}
-          />
-        ))}
+      <StatusBar props="Client Portal" />
+      <div className="client-card-display">
+        <ReportBug report={report} />
+       
+          {Bugs.map((bug) => (
+            <ClientBug
+              key={bug.bug_id}
+              bug={bug}
+              dlt={dlt}
+              deny={deny}
+              confirm={confirm}
+            />
+          ))}
+   
       </div>
     </Fragment>
   );

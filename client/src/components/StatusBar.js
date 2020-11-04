@@ -19,11 +19,16 @@ export const StatusBar = (props) => {
     <Fragment>
       <nav className="backend-nav">
         <header className="backend-nav-wrapper">
-          <h1>{heading}</h1>
-          <Logo />
-          <Link onClick={onClick} to="#" className="logout-button">
-            Log Out
-          </Link>
+          <ul>
+            <h1>{heading}</h1>
+          </ul>
+
+          {/* <Logo /> */}
+          <ul>
+            <Link onClick={onClick} to="#" className="logout-button">
+              Log Out
+            </Link>
+          </ul>
         </header>
       </nav>
     </Fragment>

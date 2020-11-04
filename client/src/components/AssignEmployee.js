@@ -25,7 +25,7 @@ export const AssignEmployee = (props) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className="status-form">
       <select
         name="assign employee"
         value={empId}
@@ -37,6 +37,7 @@ export const AssignEmployee = (props) => {
         <option value=""> -- select an employee -- </option>
         {employees.map((emp) => (
           <option
+        
             key={emp.employee_id}
             value={emp.employee_id}
             placeholder="select employee"
@@ -45,7 +46,7 @@ export const AssignEmployee = (props) => {
           </option>
         ))}
       </select>
-      <button>Assign</button>
+      <button className="solution-button">Assign</button>
     </form>
   );
 };

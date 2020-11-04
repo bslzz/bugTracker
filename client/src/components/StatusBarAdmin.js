@@ -32,8 +32,8 @@ export const StatusBarAdmin = (props) => {
           <ul>
             <h1>{heading}</h1>
           </ul>
+          {/* <Logo /> */}
 
-          <Logo />
           <ul className="backend-nav-item">
             <Link onClick={clientRegister} className="admin-button">
               Register Client

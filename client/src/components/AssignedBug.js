@@ -1,4 +1,5 @@
 import React from "react";
+import "./StatusBar.scss";
 
 export const AssignedBug = (props) => {
   const { bug, unassign, dlt } = props;
@@ -14,26 +15,33 @@ export const AssignedBug = (props) => {
   return (
     <>
       <div>
-        <p>
-          <span>Client Username:</span> {bug.client_username}
+        <p className="report-fonts">
+          <span>Client Username: </span>
+          {bug.client_username}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Project:</span> {bug.project}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug:</span> {bug.bug}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug Status:</span> {bug.bug_status}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Solution:</span> {bug.solution}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Working Employee:</span> {bug.working_emp_name}
         </p>
-        <button onClick={onClick}>Unassign</button>
-        <button onClick={deleteClick}>Delete</button>
+        <div className="admin-status-form">
+          <button onClick={onClick} className="admin-solution-button">
+            Unassign
+          </button>
+          <button onClick={deleteClick} className="admin-solution-button">
+            Delete
+          </button>
+        </div>
       </div>
     </>
   );

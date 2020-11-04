@@ -37,7 +37,9 @@ const RegisterEmployee = () => {
           <form onSubmit={submitForm} className="register-form">
             <h2 className="login-message">Register Employee </h2>
             <div>
-              <label htmlFor="exampleText">Username :</label>
+              <label htmlFor="exampleText" className="type-text">
+                Username :
+              </label>
               <div>
                 <input
                   className="input-text"
@@ -48,7 +50,9 @@ const RegisterEmployee = () => {
             </div>
 
             <div>
-              <label htmlFor="exampleInputPassword1">Password :</label>
+              <label htmlFor="exampleInputPassword1" className="type-text">
+                Password :
+              </label>
               <div>
                 <input
                   className="input-text"
@@ -62,7 +66,7 @@ const RegisterEmployee = () => {
               Register
             </button>
             <p className="login-reminder" onClick={admin}>
-              Back to Admin 
+              Back to Admin
             </p>
           </form>
         </div>

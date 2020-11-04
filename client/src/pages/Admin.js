@@ -48,11 +48,11 @@ const Admin = () => {
 
   return (
     <Fragment>
-      <StatusBarAdmin props="Admin" />
+      <StatusBarAdmin props="Admin Portal" />
 
       <div className="admin-container">
         <div className="unassigned-card">
-          <h3>Unassigned</h3>
+          <h3 className="product-features">Unassigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "unassigned" && (
@@ -66,7 +66,7 @@ const Admin = () => {
           )}
         </div>
         <div className="unassigned-card">
-          <h3>Assigned</h3>
+          <h3 className="product-features">Assigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "assigned" && (
@@ -91,7 +91,7 @@ const Admin = () => {
           )}
         </div>
         <div className="unassigned-card">
-          <h3>Solution not working</h3>
+          <h3 className="product-features">Solution not working</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "solution not working" && (
@@ -105,7 +105,7 @@ const Admin = () => {
           )}
         </div>
         <div className="unassigned-card">
-          <h3>Solved</h3>
+          <h3 className="product-features">Solved</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "solved" && (
