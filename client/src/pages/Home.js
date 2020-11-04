@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 
 
 import "./Home.scss"
@@ -20,7 +20,6 @@ const Home = () => {
       <Logo />
       <div className="button-container">
         <div className="button-card">
-          {/* <h4 className="register-head">REGISTER AS ADMIN</h4> */}
           <p className="register-message">
             This email will be your username to login
           </p>

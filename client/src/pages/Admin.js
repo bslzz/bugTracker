@@ -8,6 +8,7 @@ import { StatusBar } from '../components/StatusBar';
 import { SolvedBug } from '../components/SolvedBug';
 import { UnAssignedBug } from '../components/UnassignedBug';
 import { AssignedBug } from '../components/AssignedBug';
+import Logo from '../components/Logo';
 
 const Admin = () => {
   const { type, Bugs, getAllBugs, unassignBug, deleteBug } = useContext(
@@ -53,6 +54,7 @@ const Admin = () => {
 
   return (
     <Fragment>
+      <Logo/>
       <StatusBar props="Admin" />
       <button onClick={clientRegister}>Client Register</button>
       <button onClick={employeeRegister}>Employee Register</button>
@@ -61,7 +63,7 @@ const Admin = () => {
           <h3>Unassigned</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === 'unassigned' && (
+              bug.bug_status === "unassigned" && (
                 <UnAssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -75,7 +77,7 @@ const Admin = () => {
           <h3>Assigned</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === 'assigned' && (
+              bug.bug_status === "assigned" && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -86,7 +88,7 @@ const Admin = () => {
           )}
           {Bugs.map(
             (bug) =>
-              bug.bug_status === 'solution is given' && (
+              bug.bug_status === "solution is given" && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -100,7 +102,7 @@ const Admin = () => {
           <h3>Solution not working</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === 'solution not working' && (
+              bug.bug_status === "solution not working" && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -114,12 +116,15 @@ const Admin = () => {
           <h3>Solved</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === 'solved' && (
+              bug.bug_status === "solved" && (
                 <SolvedBug key={bug.bug_id} bug={bug} dlt={dlt} />
               )
           )}
         </div>
       </div>
+      <footer className="home-footer">
+        <p>© Bishal {"&"} Florence</p>
+      </footer>
     </Fragment>
   );
 };

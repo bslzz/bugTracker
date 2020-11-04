@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useState } from "react";
 import Logo from "../components/Logo";
+import { useHistory } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 
 const RegisterClient = () => {
@@ -7,6 +8,11 @@ const RegisterClient = () => {
   const [password, setPassword] = useState("");
 
   const { registerClient } = useContext(GlobalContext);
+  const history = useHistory();
+
+  const admin = () => {
+    history.push("/admin");
+  };
 
   const clientId = localStorage.getItem("client_id", "value");
 
@@ -30,7 +36,7 @@ const RegisterClient = () => {
           <form onSubmit={submitForm} className="register-form">
             <h2 className="login-message">Register Client </h2>
             <div>
-              <label htmlFor="exampleText">Username</label>
+              <label htmlFor="exampleText">Username :</label>
               <div>
                 <input
                   className="input-text"
@@ -41,7 +47,7 @@ const RegisterClient = () => {
             </div>
 
             <div>
-              <label htmlFor="exampleInputPassword1">Password</label>
+              <label htmlFor="exampleInputPassword1">Password :</label>
               <div>
                 <input
                   className="input-text"
@@ -54,9 +60,15 @@ const RegisterClient = () => {
             <button type="submit" className="registers-button">
               Register
             </button>
+            <p className="login-reminder" onClick={admin}>
+              Back to Admin
+            </p>
           </form>
         </div>
       </div>
+      <footer className="home-footer">
+        <p>© Bishal {"&"} Florence</p>
+      </footer>
     </Fragment>
   );
 };

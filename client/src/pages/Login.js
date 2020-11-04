@@ -25,6 +25,10 @@ const Login = () => {
     logIn(body);
   };
 
+  const login = () => {
+    history.push("/login");
+  };
+
   const register = () => {
     history.push("/register");
   };
@@ -36,7 +40,7 @@ const Login = () => {
         <div className="test">
           <form onSubmit={onSubmit} className="form-container">
             <p className="login-message">Login to your account</p>
-    
+
             <div>
               <label htmlFor="type" className="type-text">
                 Type:
@@ -55,7 +59,6 @@ const Login = () => {
               </div>
             </div>
 
-         
             <div>
               <label htmlFor="id" className="type-text">
                 Id:
@@ -86,8 +89,10 @@ const Login = () => {
                 />
               </div>
             </div>
-            <button className="logins-button">Login</button>
-         
+            <button className="logins-button" onClick={login}>
+              Login
+            </button>
+
             <p className="create-reminder" onClick={register}>
               Register
             </p>
