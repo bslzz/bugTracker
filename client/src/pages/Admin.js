@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext, useState, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
@@ -52,7 +52,7 @@ const Admin = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <StatusBar props="Admin" />
       <button onClick={clientRegister}>Client Register</button>
       <button onClick={employeeRegister}>Employee Register</button>
@@ -120,7 +120,7 @@ const Admin = () => {
           )}
         </div>
       </div>
-    </>
+    </Fragment>
   );
 };
 

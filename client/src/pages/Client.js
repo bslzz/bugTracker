@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { GlobalContext } from '../context/GlobalState';
@@ -55,7 +55,7 @@ const Client = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <StatusBar props="Client" />
       <ReportBug report={report} />
       <div>
@@ -69,7 +69,7 @@ const Client = () => {
           />
         ))}
       </div>
-    </>
+    </Fragment>
   );
 };
 

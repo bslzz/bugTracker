@@ -1,17 +1,21 @@
-import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../context/GlobalState';
-import { useHistory } from 'react-router-dom';
-import "./Register.scss"
-import Logo from '../components/Logo';
+import React, { Fragment, useContext, useState } from "react";
+import { GlobalContext } from "../context/GlobalState";
+import { useHistory } from "react-router-dom";
+import "./Register.scss";
+import Logo from "../components/Logo";
 
 const Register = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const { register } = useContext(GlobalContext);
 
-  const adminId = localStorage.getItem('type_id', 'value');
+  const adminId = localStorage.getItem("type_id", "value");
   const history = useHistory();
+
+  const login = () => {
+    history.push("/login");
+  };
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -20,63 +24,68 @@ const Register = () => {
       const body = { username, password };
       register(body);
       alert(`Your id is ${+adminId + 1}`);
-      history.push('/login');
+      history.push("/login");
     } catch (error) {
       console.log(error);
     }
   };
 
   return (
-    <section>
-      <div>{/* <h1>Register As Admin</h1> */}</div>
+    <Fragment>
       <Logo />
-      <div>
-        <div className="register-form-wrapper">
-          <div className="register-container">
-            <form onSubmit={submitForm} className="register-form">
+      <div className="register-form-wrapper">
+        <div className="register-container">
+          <form onSubmit={submitForm} className="register-form">
+            <p className="login-message">Register Admin account</p>
+            <div>
+              <label htmlFor="exampleText">Company Email :</label>
               <div>
-                <label htmlFor="exampleText">Company Email</label>
-                <div>
-                  <input
-                    className="input-text"
-                    type="text"
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="buggy@gmail.com"
-                  />
-                </div>
+                <input
+                  className="input-text"
+                  type="text"
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="buggy@gmail.com"
+                />
               </div>
+            </div>
+            <div>
+              <label htmlFor="exampleText">Username :</label>
               <div>
-                <label htmlFor="exampleText">Username</label>
-                <div>
-                  <input
-                    className="input-text"
-                    type="text"
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="admin"
-                  />
-                </div>
+                <input
+                  className="input-text"
+                  type="text"
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="admin"
+                />
               </div>
+            </div>
 
+            <div>
+              <label htmlFor="exampleInputPassword1">Password :</label>
               <div>
-                <label htmlFor="exampleInputPassword1">Password</label>
-                <div>
-                  <input
-                    className="input-text"
-                    type="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="password"
-                  />
-                </div>
+                <input
+                  className="input-text"
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="password"
+                />
               </div>
+            </div>
 
-              <button type="submit" className="registers-button">
-                Register As Admin
-              </button>
-            </form>
-          </div>
+            <button type="submit" className="registers-button">
+              Register As Admin
+            </button>
+            <p className="login-reminder" onClick={login}>
+              Login
+            </p>
+          </form>
         </div>
       </div>
-    </section>
+
+      <footer className="home-footer">
+        <p>© Bishal {"&"} Florence</p>
+      </footer>
+    </Fragment>
   );
 };
 

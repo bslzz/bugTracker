@@ -4,8 +4,7 @@
 .login-button,
 .register-button {
   width: $button-width;
-  height: $button-height;
-  font-size: $button-font-size;
+  height: $button-height; 
   font-weight: $font-weight;
   color: $button-font-color;
   border-radius: 25px;
@@ -13,7 +12,7 @@
   color: #27224a;
   cursor: pointer;
   border: 1px solid #27224a;
-  background: $background-color;
+  background: white;
   outline: none;
 }
 
@@ -27,13 +26,14 @@
 .button-container {
   display: flex;
   justify-content: center;
-  margin: 10rem auto;
+  margin-top: 70px;
+  //margin: 10rem auto;
 }
 
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 60px 5px;
 }
 
 .button-wrapper > div {
@@ -42,16 +42,33 @@
 }
 
 .button-card {
-  width: 35rem;
-  height: 300px;
-  border-radius: 10px;
-  background: $background-color;
+  width: 25rem;
+  height: 500px;
+  border-radius: 6px;
+  background: white;
+  padding: 30px 45px;
+  //width: 100%;
+  position: relative;
 }
 
 .register-head {
   text-align: center;
 }
 .register-message {
+  padding-top: 5rem;
   text-align: center;
-  color: #27224a;
+  color: #575987;
+  font-weight: 700;
+}
+
+.home-footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  color: #bac1c7;
+  padding: 39px 0 42px;
+}
+.home-footer p {
+  text-align: center;
 }
