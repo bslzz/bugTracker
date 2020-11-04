@@ -1,13 +1,14 @@
-import React, { useContext, useState } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import React, { Fragment, useContext, useState } from "react";
+import Logo from "../components/Logo";
+import { GlobalContext } from "../context/GlobalState";
 
 const RegisterClient = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const { registerClient } = useContext(GlobalContext);
 
-  const clientId = localStorage.getItem('client_id', 'value');
+  const clientId = localStorage.getItem("client_id", "value");
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -22,36 +23,41 @@ const RegisterClient = () => {
   };
 
   return (
-    <section>
-      <div>
-        <h1>Client Register</h1>
-      </div>
-      <div>
-        <div>
-          <div>
-            <form onSubmit={submitForm}>
+    <Fragment>
+      <Logo />
+      <div className="register-form-wrapper">
+        <div className="register-container">
+          <form onSubmit={submitForm} className="register-form">
+            <h2 className="login-message">Register Client </h2>
+            <div>
+              <label htmlFor="exampleText">Username</label>
               <div>
-                <label htmlFor="exampleText">Username</label>
                 <input
+                  className="input-text"
                   type="text"
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </div>
+            </div>
 
+            <div>
+              <label htmlFor="exampleInputPassword1">Password</label>
               <div>
-                <label htmlFor="exampleInputPassword1">Password</label>
                 <input
+                  className="input-text"
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+            </div>
 
-              <button type="submit">Register</button>
-            </form>
-          </div>
+            <button type="submit" className="registers-button">
+              Register
+            </button>
+          </form>
         </div>
       </div>
-    </section>
+    </Fragment>
   );
 };
 
