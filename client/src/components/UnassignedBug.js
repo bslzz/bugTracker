@@ -3,7 +3,7 @@ import React from 'react';
 import { AssignEmployee } from '../components/AssignEmployee';
 
 export const UnAssignedBug = (props) => {
-  const { bug, employees, dlt } = props;
+  const { bug, employees, className, dlt } = props;
 
   const onClick = () => {
     dlt(bug.bug_id);
@@ -11,24 +11,27 @@ export const UnAssignedBug = (props) => {
 
   return (
     <>
-      <div>
+      <div className={`bug__container ${className}`}>
         <p>
-          <span>Client Username:</span> {bug.client_username}
+          <span className="bug__titles">Client Username:</span>{' '}
+          {bug.client_username}
         </p>
         <p>
-          <span>Project:</span> {bug.project}
+          <span className="bug__titles">Project:</span> {bug.project}
         </p>
         <p>
-          <span>Bug:</span> {bug.bug}
+          <span className="bug__titles">Bug:</span> {bug.bug}
         </p>
         <p>
-          <span>Bug Status:</span> {bug.bug_status}
+          <span className="bug__titles">Bug Status:</span> {bug.bug_status}
         </p>
         <p>
-          <span>Solution:</span> {bug.solution}
+          <span className="bug__titles">Solution:</span> {bug.solution}
         </p>
         <AssignEmployee employees={employees} bug_id={bug.bug_id} />
-        <button onClick={onClick}>Delete</button>
+        <button className="bug_button bug_button_delete" onClick={onClick}>
+          Delete
+        </button>
       </div>
     </>
   );
