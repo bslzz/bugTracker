@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import { AssignEmployee } from '../components/AssignEmployee';
-import {RiDeleteBin6Fill} from "react-icons/ri"
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 export const UnAssignedBug = (props) => {
   const { bug, employees, dlt } = props;

@@ -52,9 +52,9 @@ const Login = () => {
                   value={usertype}
                   onChange={(e) => setUserType(e.target.value)}
                 >
+                  <option value="client">Client</option>
                   <option value="admin">Admin</option>
                   <option value="employee">Employee</option>
-                  <option value="client">Client</option>
                 </select>
               </div>
             </div>
@@ -95,6 +95,18 @@ const Login = () => {
 
             <p className="create-reminder" onClick={register}>
               Register
+            </p>
+            <p className="terms-conditions">
+              By signing below, you agree to the <br />
+              <b style={{ color: "#fc4463", cursor: "pointer" }}>
+                Terms and Conditions
+              </b>{" "}
+              of this
+              <b
+                style={{ color: "#fc4463", padding: "3px", cursor: "pointer" }}
+              >
+                Enrolment Agreement.
+              </b>
             </p>
           </form>
         </div>

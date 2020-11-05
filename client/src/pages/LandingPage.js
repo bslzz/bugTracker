@@ -69,19 +69,19 @@ const LandingPage = () => {
 
       {/* Section 3 */}
       <section className="product-section-wrap">
-        <h2 className="product-features">Products</h2>
+        <h2 className="product-features">Product Guide</h2>
         <div className="bug-trackers">
           <img src={info} className="sub-banner-image" alt="sub-banner-image" />
 
           <div className="support-message">
-            <h2>BUG TRACKING</h2>
+            <h4>BUG TRACKING</h4>
             <span> It's easier to plan sprints efficiently</span>
-            <span>when you use BlahBlaHbLAH</span>
+            <span>when you use BUGGY</span>
             <span>
               Planner to view the capacities of your sprint, team, and team
             </span>
             <span>members and assign work accordingly.</span>
-            <h2>FIND OUT HOW IT WORKS</h2>
+            <h4>FIND OUT HOW IT WORKS</h4>
             <span> It's easier to plan sprints efficiently</span>
             <span>when you use BlahBlaHbLAH</span>
             <span>
@@ -95,7 +95,7 @@ const LandingPage = () => {
       {/* Section 5 */}
       <section className="bug-icons">
         <div>
-          <h2 className="sub-heads">Bug Tracking</h2>
+          <h2 className="product-features">Develop Faster</h2>
           <div className="featured-works">
             <img
               src={analytics}

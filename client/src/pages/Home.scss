@@ -4,7 +4,7 @@
 .login-button,
 .register-button {
   width: $button-width;
-  height: $button-height; 
+  height: $button-height;
   font-weight: $font-weight;
   color: $button-font-color;
   border-radius: 25px;
@@ -47,6 +47,7 @@
   border-radius: 6px;
   background: white;
   padding: 30px 45px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   //width: 100%;
   position: relative;
 }

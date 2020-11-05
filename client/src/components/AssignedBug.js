@@ -1,5 +1,6 @@
 import React from "react";
 import "./StatusBar.scss";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 export const AssignedBug = (props) => {
   const { bug, unassign, dlt } = props;
@@ -34,13 +35,16 @@ export const AssignedBug = (props) => {
         <p className="report-fonts">
           <span>Working Employee:</span> {bug.working_emp_name}
         </p>
-        <div className="admin-status-form">
-          <button onClick={onClick} className="admin-solution-button">
-            Unassign
-          </button>
-          <button onClick={deleteClick} className="admin-solution-button">
-            Delete
-          </button>
+
+        <button onClick={onClick} className="admin-solution-button">
+          Unassign
+        </button>
+        {/* <button onClick={deleteClick} className="admin-solution-button"> */}
+
+        {/* </button> */}
+
+        <div onClick={deleteClick} className="delete-bin">
+          <RiDeleteBin6Fill />
         </div>
       </div>
     </>

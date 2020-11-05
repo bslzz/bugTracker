@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
+import { RiDeleteBin6Fill } from "react-icons/ri";
 
 export const ClientBug = (props) => {
   const { bug, dlt, deny, confirm } = props;
@@ -29,17 +30,23 @@ export const ClientBug = (props) => {
             <span>Bug Status:</span> {bug.bug_status}
           </p>
           {bug.bug_status !== "unassigned" && (
-            <p>
+            <p className="report-fonts">
               <span>Working Employee:</span> {bug.working_emp_name}
             </p>
           )}
           {bug.bug_status === "solution is given" && (
             <div>
-              <p>
+              <p className="report-fonts">
                 <span>Solution:</span> {bug.solution}
               </p>
-              <button onClick={denyClick}>Deny</button>
-              <button onClick={confirmClick}>Confirm</button>
+              <div className="client-button-wrapper">
+                <button onClick={denyClick} className="admin-report-bug">
+                  Deny
+                </button>
+                <button onClick={confirmClick} className="admin-report-bug">
+                  Confirm
+                </button>
+              </div>
             </div>
           )}
           {bug.bug_status === "solved" && (
@@ -52,9 +59,9 @@ export const ClientBug = (props) => {
               <span>Solution:</span> {bug.solution}
             </p>
           )}
-          <button onClick={deleteClick} className="admin-report-bug">
-            Delete
-          </button>
+          <div onClick={deleteClick} className="delete-bin-client">
+            <RiDeleteBin6Fill />
+          </div>
         </div>
       </div>
     </Fragment>

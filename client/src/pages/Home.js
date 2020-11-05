@@ -16,7 +16,6 @@ const Home = () => {
   };
   return (
     <Fragment>
-  
       <Logo />
       <div className="button-container">
         <div className="button-card">
@@ -35,12 +34,21 @@ const Home = () => {
               </button>
             </div>
           </div>
+          <p className="terms-conditions">
+            By signing below, you agree to the <br />
+            <b style={{ color: "#fc4463", cursor: "pointer" }}>
+              Terms and Conditions
+            </b>{" "}
+            of this
+            <b style={{ color: "#fc4463", padding: "3px", cursor: "pointer" }}>
+              Enrolment Agreement.
+            </b>
+          </p>
         </div>
       </div>
       <footer className="home-footer">
         <p>© Bishal {"&"} Florence</p>
       </footer>
-  
     </Fragment>
   );
 };
