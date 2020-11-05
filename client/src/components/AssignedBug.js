@@ -1,4 +1,5 @@
 import React from "react";
+import "./StatusBar.scss";
 
 export const AssignedBug = (props) => {
   const { bug, className, unassign, dlt } = props;
@@ -13,33 +14,34 @@ export const AssignedBug = (props) => {
 
   return (
     <>
-      <div className={`bug__container ${className}`}>
-        <p>
-          <span className="bug__titles">Client Username:</span>{' '}
+      <div>
+        <p className="report-fonts">
+          <span>Client Username: </span>
           {bug.client_username}
         </p>
-        <p>
-          <span className="bug__titles">Project:</span> {bug.project}
+        <p className="report-fonts">
+          <span>Project:</span> {bug.project}
         </p>
-        <p>
-          <span className="bug__titles">Bug:</span> {bug.bug}
+        <p className="report-fonts">
+          <span>Bug:</span> {bug.bug}
         </p>
-        <p>
-          <span className="bug__titles">Bug Status:</span> {bug.bug_status}
+        <p className="report-fonts">
+          <span>Bug Status:</span> {bug.bug_status}
         </p>
-        <p>
-          <span className="bug__titles">Solution:</span> {bug.solution}
+        <p className="report-fonts">
+          <span>Solution:</span> {bug.solution}
         </p>
-        <p>
-          <span className="bug__titles">Working Employee:</span>{' '}
-          {bug.working_emp_name}
+        <p className="report-fonts">
+          <span>Working Employee:</span> {bug.working_emp_name}
         </p>
-        <button className="bug_button bug_button_unassign" onClick={onClick}>
-          Unassign
-        </button>
-        <button className="bug_button bug_button_delete" onClick={deleteClick}>
-          Delete
-        </button>
+        <div className="admin-status-form">
+          <button onClick={onClick} className="admin-solution-button">
+            Unassign
+          </button>
+          <button onClick={deleteClick} className="admin-solution-button">
+            Delete
+          </button>
+        </div>
       </div>
     </>
   );

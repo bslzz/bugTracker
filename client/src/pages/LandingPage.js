@@ -2,7 +2,6 @@ import React from "react";
 import Navbars from "./Navbars";
 import { Link } from "react-router-dom";
 
-
 //icons
 import { FaFacebook } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -47,47 +46,49 @@ const LandingPage = () => {
       <div className="nav-wrap">
         <Navbars />
       </div>
-      <h2 className="product-features">Features</h2>
-      <div className="more-leads-wrap">
-        <p className="more-leads">
-          Sourcetree simplifies how you interact with your Git repositories so
-          you can focus on coding. Visualize and manage your repositories
-          through Sourcetree's simple Git GUI.
-        </p>
-      </div>
-      {/* <hr className="underline" /> */}
-
-      {/* Section 3 */}
       <section className="about-app-features">
-        {/* <img src={info} className="sub-banner-image" alt="sub-banner-image" /> */}
-        <div className="features-wrapper">
-          <ul className="info-list">
-            <li>Submit</li>
-            <li>Track </li>
-            <li> Resolve Issues </li>
-          </ul>
+        <div>
+          <h2 className="product-features">Features</h2>
+          <div className="more-leads-wrap">
+            <p className="more-leads">
+              Sourcetree simplifies how you interact with your Git repositories
+              so you can focus on coding. Visualize and manage your repositories
+              through Sourcetree's simple Git GUI.
+            </p>
+          </div>
+          {/* <img src={info} className="sub-banner-image" alt="sub-banner-image" /> */}
+          <div className="features-wrapper">
+            <ul className="info-list">
+              <li>Submit</li>
+              <li>Track </li>
+              <li> Resolve Issues </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Section 4 */}
-      <section className="bug-trackers">
-        <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+      {/* Section 3 */}
+      <section className="product-section-wrap">
+        <h2 className="product-features">Products</h2>
+        <div className="bug-trackers">
+          <img src={info} className="sub-banner-image" alt="sub-banner-image" />
 
-        <div className="support-message">
-          <h2>Bug Tracking</h2>
-          <span> It's easier to plan sprints efficiently</span>
-          <span>when you use BlahBlaHbLAH</span>
-          <span>
-            Planner to view the capacities of your sprint, team, and team
-          </span>
-          <span>members and assign work accordingly.</span>
-          <h2>Bug Tracking</h2>
-          <span> It's easier to plan sprints efficiently</span>
-          <span>when you use BlahBlaHbLAH</span>
-          <span>
-            Planner to view the capacities of your sprint, team, and team
-          </span>
-          <span>members and assign work accordingly.</span>
+          <div className="support-message">
+            <h2>BUG TRACKING</h2>
+            <span> It's easier to plan sprints efficiently</span>
+            <span>when you use BlahBlaHbLAH</span>
+            <span>
+              Planner to view the capacities of your sprint, team, and team
+            </span>
+            <span>members and assign work accordingly.</span>
+            <h2>FIND OUT HOW IT WORKS</h2>
+            <span> It's easier to plan sprints efficiently</span>
+            <span>when you use BlahBlaHbLAH</span>
+            <span>
+              Planner to view the capacities of your sprint, team, and team
+            </span>
+            <span>members and assign work accordingly.</span>
+          </div>
         </div>
       </section>
 
@@ -126,33 +127,28 @@ const LandingPage = () => {
       <footer className="footer">
         <div className="footer-words">
           <ul>
-            <li>About Logo</li>
-            <li>Support</li>
+            <li>About</li>
+            <li>Products</li>
             <li>Documentation</li>
             <li>Blog</li>
           </ul>
           <ul>
-            <li>About Logo</li>
+            <li>More Features</li>
+            <li>Customers</li>
             <li>Support</li>
-            <li>Documentation</li>
-            <li>Blog</li>
+            <li>Tutorials</li>
           </ul>
           <div>
             <h4>Connect with us</h4>
-            <IconContext.Provider
-              value={{
-                style: { color: "white" },
-              }}
-            >
-              <FaFacebook />
-              <AiFillTwitterCircle />
-              <SiLinkedin />
-            </IconContext.Provider>
+
+            <FaFacebook className="sm-icons" />
+            <AiFillTwitterCircle className="sm-icons" />
+            <SiLinkedin className="sm-icons" />
           </div>
         </div>
 
         <p className="copyright">
-          © 2002–2020 Buggy, LLC. Made with in Scottsdale, Arizona.
+          © 2020 Buggy. Made by Bishal {"&"} Florence.
         </p>
       </footer>
     </div>

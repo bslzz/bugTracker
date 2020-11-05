@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext,Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { GlobalContext } from '../context/GlobalState';
@@ -27,14 +27,14 @@ const Employee = () => {
   };
 
   return (
-    <>
-      <StatusBar props="Employee" />
-      <div className="bugs__container">
+    <Fragment>
+      <StatusBar props="Employee Portal" />
+      <div className="unassigned-card">
         {Bugs.map((bug) => (
           <EmployeeBug key={bug.bug_id} bug={bug} solve={solve} />
         ))}
       </div>
-    </>
+    </Fragment>
   );
 };
 

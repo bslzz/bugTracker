@@ -1,10 +1,11 @@
 import React, { useEffect, useContext, useState, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import "./Admin.scss"
 
 import { GlobalContext } from '../context/GlobalState';
 
-import { StatusBar } from '../components/StatusBar';
+import { StatusBarAdmin } from '../components/StatusBarAdmin';
 import { SolvedBug } from '../components/SolvedBug';
 import { UnAssignedBug } from '../components/UnassignedBug';
 import { AssignedBug } from '../components/AssignedBug';
@@ -43,31 +44,15 @@ const Admin = () => {
     };
     deleteBug(body);
   };
-  const clientRegister = (e) => {
-    e.preventDefault();
-    history.push('/admin/clientRegister');
-  };
-  const employeeRegister = (e) => {
-    e.preventDefault();
-    history.push('/admin/employeeRegister');
-  };
+ 
 
   return (
     <Fragment>
-      <Logo />
-      <StatusBar props="Admin" />
-      <div className="adminBtn">
-        <button className="clientRegisterBtn" onClick={clientRegister}>
-          Client Register
-        </button>
-        <button className="clientRegisterBtn" onClick={employeeRegister}>
-          Employee Register
-        </button>
-      </div>
+      <StatusBarAdmin props="Admin Portal" />
 
-      <div className="bugs__container">
-        <div className="bugs__unassigned">
-          <h3 className="bugs__heading bugs__heading_unassigned">Unassigned</h3>
+      <div className="admin-container">
+        <div className="unassigned-card">
+          <h3 className="product-features">Unassigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "unassigned" && (
@@ -81,8 +66,8 @@ const Admin = () => {
               )
           )}
         </div>
-        <div className="bugs__assigned">
-          <h3 className="bugs__heading bugs__heading_assigned">Assigned</h3>
+        <div className="unassigned-card">
+          <h3 className="product-features">Assigned</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "assigned" && (
@@ -108,10 +93,8 @@ const Admin = () => {
               )
           )}
         </div>
-        <div className="bugs__notworking">
-          <h3 className="bugs__heading bugs__heading_notworking">
-            Solution not working
-          </h3>
+        <div className="unassigned-card">
+          <h3 className="product-features">Solution not working</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === "solution not working" && (
@@ -125,8 +108,8 @@ const Admin = () => {
               )
           )}
         </div>
-        <div className="bugs__solved">
-          <h3 className="bugs__heading bugs__heading_solved">Solved</h3>
+        <div className="unassigned-card">
+          <h3 className="product-features">Solved</h3>
           {Bugs.map(
             (bug) =>
               bug.bug_status === 'solved' && (

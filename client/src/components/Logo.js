@@ -6,7 +6,7 @@ const Logo = () => {
     return (
       <div>
         <Link to="/" className="navbar-logo-mobile">
-          Buggy
+          BUGGY
         </Link>
       </div>
     );

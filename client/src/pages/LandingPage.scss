@@ -47,22 +47,30 @@
 }
 // Section 2
 .about-app-features {
+  //background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  //padding: 5rem;
   // height: 25vh;
 }
 .bug-trackers {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  max-height: 500px;
-  height: 45vh;
+  //max-height: 500px;
+  //height: 45vh;
   margin: 0 auto;
 }
 
+.product-section-wrap {
+  background: white;
+}
+
 .product-features {
-  padding-top: 1rem;
+  padding-top: 2.5rem;
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: $heading-color;
 }
@@ -87,14 +95,20 @@
 }
 
 .info-list li {
-  background: rgb(166, 114, 233);
+  background: white;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   width: 8rem;
   height: 1.5rem;
   padding: 1rem;
   text-align: center;
   margin: 3rem 2.5rem;
   border-radius: 5px;
-  color: white;
+  color: #27224a;
+  font-weight: bold;
+}
+
+.info-list li:hover {
+  color: #fc4463;
 }
 .more-app-info {
   display: flex;
@@ -119,11 +133,13 @@
 
 // Section 5
 .bug-icons {
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 40vh;
   color: #27224a;
+  padding: 5rem;
 }
 .sub-heads {
   text-align: center;
@@ -148,8 +164,8 @@
 // Footer
 
 .footer {
-  background: rgb(99, 115, 252);
-  height: 40vh;
+  background: #27224a;
+  height: 30vh;
 }
 .footer-words {
   display: flex;
@@ -161,6 +177,22 @@
 .footer-words li {
   list-style-type: none;
 }
+
+.footer-words li:hover {
+  color: #fc4463;
+  cursor: pointer;
+}
 .copyright {
   text-align: center;
+  color: #27224a;
+  padding-bottom: 10px;
+}
+
+.sm-icons {
+  font-size: 2rem;
+  padding: 5px;
+}
+.sm-icons:hover {
+  color: #fc4463;
+  cursor: pointer;
 }

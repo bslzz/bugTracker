@@ -21,11 +21,12 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  color: #575987;
+  color: #fc4463;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  font-weight: bolder;
 }
 
 .nav-menu {
@@ -46,9 +47,14 @@
   padding: 20px;
 }
 
-#nav_link {
+.nav_link {
   text-decoration: none;
-  color:  #27224a;
+  color: white;
+}
+
+.nav_link:hover {
+  color: #fc4463;
+  filter: brightness(120%);
 }
 
 .nav-links {
@@ -58,7 +64,7 @@
 }
 
 #navbars {
-  background: #f3f3fc;
+  background: #27224a;
   opacity: 0.9;
   top: 0;
   height: 80px;
@@ -76,7 +82,7 @@
 // }
 
 .fa-bars {
-  color: #27224a;
+  color: white;
 }
 
 // .nav-links-mobile {
@@ -85,6 +91,26 @@
 
 .menu-icon {
   display: none;
+}
+
+.sign-up-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 6rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+.sign-up-button:hover {
+  background-color: white;
+  color: #fc4463;
+
 }
 
 @media screen and (max-width: 960px) {
@@ -96,7 +122,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     position: absolute;
     top: 60px;
     left: -100%;
@@ -130,9 +156,10 @@
   //   filter: brightness(110%);
   // }
 
-  #nav_link {
+  .nav_link {
     color: white;
   }
+
   .navbar-logo {
     position: absolute;
     top: 0;
@@ -151,7 +178,7 @@
   }
 
   .fa-times {
-    color: #27224a;
+    color: white;
     font-size: 2rem;
   }
 

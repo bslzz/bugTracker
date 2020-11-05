@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const EmployeeBug = (props) => {
   const { bug, solve } = props;
 
-  const [solution, setSolution] = useState('');
+  const [solution, setSolution] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -16,51 +16,62 @@ export const EmployeeBug = (props) => {
 
   return (
     <>
-      <div
-        className={
-          bug.bug_status === 'solution not working'
-            ? 'bug__container bug__container__red'
-            : 'bug__container'
-        }
-      >
-        <p>
-          <span className="bug__titles">Project:</span> {bug.project}
+      <div>
+        <p className="report-fonts">
+          <span>Project:</span> {bug.project}
         </p>
-        <p>
-          <span className="bug__titles">Client:</span>
+        <p className="report-fonts">
+          <span>Client: </span>
           {bug.client_username}
         </p>
-        <p>
-          <span className="bug__titles">Bug:</span> {bug.bug}
+        <p className="report-fonts">
+          <span>Bug: </span>
+          {bug.bug}
         </p>
-        <p>
-          <span className="bug__titles">Bug Status:</span> {bug.bug_status}
+        <p className="report-fonts">
+          <span>Bug Status:</span> {bug.bug_status}
         </p>
-        {bug.bug_status === 'solution is given' && (
-          <p>
-            <span className="bug__titles">Given Solution:</span> {bug.solution}
+        {bug.bug_status === "solution is given" && (
+          <p className="report-fonts">
+            <span>Status:</span> {bug.solution}
           </p>
         )}
-        {bug.bug_status === 'solution not working' && (
+        {bug.bug_status === "solution not working" && (
           <p>
             <span className="bug__titles">Previous Solution:</span>{' '}
             {bug.solution}
           </p>
         )}
-        <div className="solution__form__container">
-          <form onSubmit={onSubmit} className="solution__form">
-            <input
+        <div>
+          <form onSubmit={onSubmit} className="status-form">
+            {/* <input
               type="string"
               name="solution"
               value={solution}
               onChange={(e) => setSolution(e.target.value)}
               placeholder="Enter the solution for the bug..."
-              className="report_bug_form_input"
-            />
-            <button className="bug_button">Give Solution</button>
+            /> */}
+
+            <span>
+              <select
+                className="option-input-solution"
+                name="type"
+                value={solution}
+                onChange={(e) => setSolution(e.target.value)}
+              >
+                <option value="other">-- Other --</option>
+                <option value="progress">In progress</option>
+                <option value="review">Review Solution</option>
+                <option value="solved">Solved</option>
+              </select>
+            </span>
+            <button className="solution-button">Confirm status</button>
           </form>
         </div>
       </div>
+      <footer className="home-footer">
+        <p>© Bishal {"&"} Florence</p>
+      </footer>
     </>
   );
 };
