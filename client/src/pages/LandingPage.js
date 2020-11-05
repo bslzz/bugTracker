@@ -74,14 +74,14 @@ const LandingPage = () => {
           <img src={info} className="sub-banner-image" alt="sub-banner-image" />
 
           <div className="support-message">
-            <h2>Bug Tracking</h2>
+            <h2>BUG TRACKING</h2>
             <span> It's easier to plan sprints efficiently</span>
             <span>when you use BlahBlaHbLAH</span>
             <span>
               Planner to view the capacities of your sprint, team, and team
             </span>
             <span>members and assign work accordingly.</span>
-            <h2>Bug Tracking</h2>
+            <h2>FIND OUT HOW IT WORKS</h2>
             <span> It's easier to plan sprints efficiently</span>
             <span>when you use BlahBlaHbLAH</span>
             <span>
