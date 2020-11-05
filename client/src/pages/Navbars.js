@@ -62,12 +62,12 @@ const Navbars = () => {
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <Link to="#features" id="nav_link">
+          <Link to="#features" className="nav_link">
             Features
           </Link>
         </li>
         <li className="nav-item">
-          <Link to="#guide" id="nav_link">
+          <Link to="#guide" className="nav_link">
             Product guide
           </Link>
         </li>
@@ -75,7 +75,7 @@ const Navbars = () => {
           <Link
             to="/features"
             // className="nav-links  nav-links-mobile"
-            id="nav_link"
+            className="nav_link sign-up-button"
           >
             SignUp
           </Link>
