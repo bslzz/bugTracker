@@ -31,7 +31,7 @@ export const ClientBug = (props) => {
           </p>
           {bug.bug_status !== "unassigned" && (
             <p className="report-fonts">
-              <span>Working Employee:</span> {bug.working_emp_name}
+              <span>Working Employee: </span> {bug.working_emp_name}
             </p>
           )}
           {bug.bug_status === "solution is given" && (

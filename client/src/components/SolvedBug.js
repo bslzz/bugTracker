@@ -10,25 +10,27 @@ export const SolvedBug = (props) => {
   return (
     <>
       <div>
-        <p>
+        <p className="report-fonts">
           <span>Client Username:</span> {bug.client_username}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Project:</span> {bug.project}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug:</span> {bug.bug}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Bug Status:</span> {bug.bug_status}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Solution:</span> {bug.solution}
         </p>
-        <p>
+        <p className="report-fonts">
           <span>Working Employee:</span> {bug.working_emp_name}
         </p>
-        <button onClick={onClick}>Delete</button>
+        <button onClick={onClick} className="admin-solution-button">
+          Resolved
+        </button>
       </div>
     </>
   );

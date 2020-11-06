@@ -33,7 +33,7 @@ const LandingPage = () => {
                 Software BugTracker for your every project
               </h1>
               <Link to="/features">
-                <button className="call-to-action">SignUp</button>
+                <button className="call-to-action">Get Started</button>
               </Link>
             </div>
 

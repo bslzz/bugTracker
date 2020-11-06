@@ -64,7 +64,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-   width: 7rem;
+  width: 7rem;
   height: 2rem;
   font-size: 12px;
   font-weight: bolder;
@@ -108,7 +108,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-    width: 7rem;
+  width: 7rem;
   height: 2rem;
   font-size: 12px;
   font-weight: bolder;
@@ -117,7 +117,7 @@
   color: #fc4463;
   outline: none;
   border: 1px solid #fc4463;
-  margin: 0.5rem;
+  //margin: 0.5rem;
 }
 
 .admin-solution-button:hover {
@@ -146,7 +146,7 @@
   background: transparent;
   border-radius: 20px;
   color: #fc4463;
-  
+
   outline: none;
   border: 1px solid #fc4463;
   margin-top: 2rem;
@@ -193,7 +193,6 @@
   color: #fc4463;
 }
 
-
 .client-button-wrapper {
   display: flex;
 }
@@ -201,5 +200,21 @@
 .client-button-wrapper button {
   margin: 1rem 1rem 0rem 0rem;
 }
+
+// AssignedBug
+
+.buttons-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  
+}
+
+// .divider-rule{
+//   border: 0.5px solid red;
+//   line-height: 18px;
+// }
 
 

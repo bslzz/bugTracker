@@ -77,7 +77,7 @@ const Navbars = () => {
             // className="nav-links  nav-links-mobile"
             className="nav_link sign-up-button"
           >
-            SignUp
+            Get Started
           </Link>
         </li>
       </ul>

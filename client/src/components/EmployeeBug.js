@@ -58,9 +58,9 @@ export const EmployeeBug = (props) => {
                 value={solution}
                 onChange={(e) => setSolution(e.target.value)}
               >
-                <option value="other">-- Other --</option>
-                <option value="progress">In progress</option>
-                <option value="review">Review Solution</option>
+                <option value="other">-- Choose status --</option>
+                <option value="progress">In Progress</option>
+                <option value="review">Review </option>
                 <option value="solved">Solved</option>
               </select>
             </span>
