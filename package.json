@@ -1,0 +1,29 @@
+{
+  "name": "bugtracker",
+  "version": "1.0.0",
+  "description": "bug tracker project",
+  "main": "app.js",
+  "repository": "https://github.com/bslzz/bugTracker.git",
+  "author": "bslzz <bishalkoid@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install -- prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "mongoose-sequence": "^5.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,220 @@
+@import "../styles/scss/variables.scss";
+
+.backend-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+}
+
+.backend-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  max-width: 1600px;
+}
+.backend-nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backend-nav-wrapper h1 {
+  color: #fc4463;
+}
+
+.logout-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 6rem;
+  height: 2.5rem;
+  background: #fc4463;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+
+.logout-button:hover {
+  filter: brightness(120%);
+}
+
+.admin-button {
+  text-decoration: none;
+  padding: 1rem;
+  color: #27224a;
+  font-weight: 800;
+}
+
+.admin-button:hover {
+  color: #fc4463;
+  filter: brightness(120%);
+}
+
+// Employee Bug
+
+.solution-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 7rem;
+  height: 2rem;
+  font-size: 12px;
+  font-weight: bolder;
+  background: transparent;
+  border-radius: 20px;
+  color: #fc4463;
+  outline: none;
+  border: 1px solid #fc4463;
+  margin: 2rem 1rem;
+}
+
+.solution-button:hover {
+  background: #fc4463;
+  filter: brightness(130%);
+  color: white;
+}
+
+.status-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-input-solution {
+  width: 10rem;
+  outline: none;
+  height: 2rem;
+  border-radius: 3px;
+  border: 1px solid rgb(82, 80, 80);
+}
+
+.report-fonts span {
+  font-weight: bold;
+}
+
+// Admin Portal Cards
+
+.admin-solution-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 7rem;
+  height: 2rem;
+  font-size: 12px;
+  font-weight: bolder;
+  background: transparent;
+  border-radius: 20px;
+  color: #fc4463;
+  outline: none;
+  border: 1px solid #fc4463;
+  //margin: 0.5rem;
+}
+
+.admin-solution-button:hover {
+  background: #fc4463;
+  filter: brightness(130%);
+  color: white;
+}
+
+.admin-status-form {
+  display: grid;
+  justify-content: center;
+}
+
+// ReportBug
+
+.admin-report-bug {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 7rem;
+  height: 2rem;
+  font-size: 12px;
+  font-weight: bolder;
+  background: transparent;
+  border-radius: 20px;
+  color: #fc4463;
+
+  outline: none;
+  border: 1px solid #fc4463;
+  margin-top: 2rem;
+}
+.admin-report-bug:hover {
+  background: #fc4463;
+  filter: brightness(130%);
+  color: white;
+}
+
+.option-input-report {
+  width: 20rem;
+  outline: none;
+  height: 2rem;
+  border-radius: 3px;
+  border: 1px solid rgb(82, 80, 80);
+}
+
+.report-head {
+  padding: 1rem 0rem;
+}
+
+//Unassigned Bug
+
+.delete-bin {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #27224a;
+}
+.delete-bin:hover {
+  color: #fc4463;
+}
+
+// Client Bug
+
+.delete-bin-client {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #27224a;
+  padding: 2rem 0rem 0rem 0rem;
+}
+
+.delete-bin-client:hover {
+  color: #fc4463;
+}
+
+.client-button-wrapper {
+  display: flex;
+}
+
+.client-button-wrapper button {
+  margin: 1rem 1rem 0rem 0rem;
+}
+
+// AssignedBug
+
+.buttons-display {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0rem;
+  
+}
+
+// .divider-rule{
+//   border: 0.5px solid red;
+//   line-height: 18px;
+// }
+
+

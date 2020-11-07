@@ -1,0 +1,19 @@
+@import "../styles/scss/variables.scss";
+
+.unassigned-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  width: 20%;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 3px 3px 15px #888888;
+  margin: 3rem;
+  transition: all 0.5s ease;
+}
+
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
