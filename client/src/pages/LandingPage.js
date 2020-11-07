@@ -1,23 +1,22 @@
-import React from "react";
-import Navbars from "./Navbars";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Navbars from './Navbars';
+import { Link } from 'react-router-dom';
 
 //icons
-import { FaFacebook } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { SiLinkedin } from "react-icons/si";
-import { IconContext } from "react-icons";
+import { FaFacebook } from 'react-icons/fa';
+import { AiFillTwitterCircle } from 'react-icons/ai';
+import { SiLinkedin } from 'react-icons/si';
 
 //assets
-import hero from "./../assets/land.svg";
-import info from "./../assets/info.svg";
-import analytics from "./../assets/analytics.svg";
-import assign from "./../assets/assign.svg";
-import search from "./../assets/search.svg";
-import statistics from "./../assets/statistics.svg";
+import hero from './../assets/land.svg';
+import info from './../assets/info.svg';
+import analytics from './../assets/analytics.svg';
+import assign from './../assets/assign.svg';
+import search from './../assets/search.svg';
+import statistics from './../assets/statistics.svg';
 
-import "./LandingPage.scss";
-import Logo from "../components/Logo";
+import './LandingPage.scss';
+import Logo from '../components/Logo';
 
 const LandingPage = () => {
   return (
@@ -37,7 +36,7 @@ const LandingPage = () => {
               </Link>
             </div>
 
-            <img src={hero} className="hero-banner-image" />
+            <img src={hero} className="hero-banner-image" alt="hero-banner" />
           </div>
         </section>
       </div>
@@ -71,7 +70,7 @@ const LandingPage = () => {
       <section className="product-section-wrap">
         <h2 className="product-features">Product Guide</h2>
         <div className="bug-trackers">
-          <img src={info} className="sub-banner-image" alt="sub-banner-image" />
+          <img src={info} className="sub-banner-image" alt="sub-banner" />
 
           <div className="support-message">
             <h4>BUG TRACKING</h4>
@@ -100,23 +99,23 @@ const LandingPage = () => {
             <img
               src={analytics}
               className="featured-works-image"
-              alt="featured-works-image"
+              alt="featured-works"
             />
 
             <img
               src={assign}
               className="featured-works-image"
-              alt="featured-works-image"
+              alt="featured-works"
             />
             <img
               src={search}
               className="featured-works-image"
-              alt="featured-works-image"
+              alt="featured-works"
             />
             <img
               src={statistics}
               className="featured-works-image"
-              alt="featured-works-image"
+              alt="featured-works"
             />
           </div>
         </div>
@@ -148,7 +147,7 @@ const LandingPage = () => {
         </div>
 
         <p className="copyright">
-          © 2020 Buggy. Made by Bishal {"&"} Florence.
+          © 2020 Buggy. Made by Bishal {'&'} Florence.
         </p>
       </footer>
     </div>

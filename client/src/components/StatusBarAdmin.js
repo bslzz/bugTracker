@@ -1,10 +1,9 @@
-import React, { useContext, Fragment } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useContext, Fragment } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
-import "./StatusBar.scss";
+import './StatusBar.scss';
 
-import { GlobalContext } from "../context/GlobalState";
-import Logo from "./Logo";
+import { GlobalContext } from '../context/GlobalState';
 
 export const StatusBarAdmin = (props) => {
   const { logOut } = useContext(GlobalContext);
@@ -12,14 +11,14 @@ export const StatusBarAdmin = (props) => {
   const heading = props.props;
   const history = useHistory();
 
-    const clientRegister = (e) => {
-      e.preventDefault();
-      history.push("/admin/clientRegister");
-    };
-    const employeeRegister = (e) => {
-      e.preventDefault();
-      history.push("/admin/employeeRegister");
-    };
+  const clientRegister = (e) => {
+    e.preventDefault();
+    history.push('/admin/clientRegister');
+  };
+  const employeeRegister = (e) => {
+    e.preventDefault();
+    history.push('/admin/employeeRegister');
+  };
 
   const onClick = () => {
     logOut();

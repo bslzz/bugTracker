@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState, Fragment } from 'react';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-import "./Admin.scss"
+import './Admin.scss';
 
 import { GlobalContext } from '../context/GlobalState';
 
@@ -9,7 +9,6 @@ import { StatusBarAdmin } from '../components/StatusBarAdmin';
 import { SolvedBug } from '../components/SolvedBug';
 import { UnAssignedBug } from '../components/UnassignedBug';
 import { AssignedBug } from '../components/AssignedBug';
-import Logo from '../components/Logo';
 
 const Admin = () => {
   const { type, Bugs, getAllBugs, unassignBug, deleteBug } = useContext(
@@ -44,7 +43,6 @@ const Admin = () => {
     };
     deleteBug(body);
   };
- 
 
   return (
     <Fragment>
@@ -55,7 +53,7 @@ const Admin = () => {
           <h3 className="product-features">Unassigned</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "unassigned" && (
+              bug.bug_status === 'unassigned' && (
                 <UnAssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -69,7 +67,7 @@ const Admin = () => {
           <h3 className="product-features">Assigned</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "assigned" && (
+              bug.bug_status === 'assigned' && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -80,7 +78,7 @@ const Admin = () => {
           )}
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "solution is given" && (
+              bug.bug_status === 'solution is given' && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -94,7 +92,7 @@ const Admin = () => {
           <h3 className="product-features">Solution not working</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "solution not working" && (
+              bug.bug_status === 'solution not working' && (
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
@@ -108,14 +106,14 @@ const Admin = () => {
           <h3 className="product-features">Solved</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "solved" && (
+              bug.bug_status === 'solved' && (
                 <SolvedBug key={bug.bug_id} bug={bug} dlt={dlt} />
               )
           )}
         </div>
       </div>
       <footer className="home-footer">
-        <p>© Bishal {"&"} Florence</p>
+        <p>© Bishal {'&'} Florence</p>
       </footer>
     </Fragment>
   );
