@@ -1,0 +1,200 @@
+@import "./../../styles/scss/variables.scss";
+
+.navbar {
+  background: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+// .navbar-logo {
+//   color: $button-background;
+//   justify-self: start;
+//   cursor: pointer;
+//   text-decoration: none;
+//   font-size: 2rem;
+// }
+.navbar-logo-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: #fc4463;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 20px;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav_link:hover {
+  color: #fc4463;
+  filter: brightness(120%);
+}
+
+.nav-links {
+  color: $button-background;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+#navbars {
+  background: #27224a;
+  opacity: 0.9;
+  top: 0;
+  height: 80px;
+  width: 100%;
+}
+// .sticky {
+//   position: fixed;
+//   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+//   transition: all 3s ease-in-out;
+// }
+// .nav-links:hover {
+//   background-color: #1888ff;
+//   border-radius: 4px;
+//   transition: all 0.2s ease-out;
+// }
+
+.fa-bars {
+  color: white;
+}
+
+// .nav-links-mobile {
+//   display: none;
+// }
+
+.menu-icon {
+  display: none;
+}
+
+.sign-up-button {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 8rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+}
+.sign-up-button:hover {
+  background-color: white;
+  color: #fc4463;
+
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #575987;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .navbar-logo-mobile {
+    color: #fc4463;
+  }
+
+  .nav-links-mobile {
+    // text-align: center;
+    // padding: 2rem;
+    // width: 100%;
+    // display: table;
+    // color: white;
+  }
+
+  // .nav-links-mobile:hover {
+  //   background-color: rgb(99, 115, 252);
+  //   border-radius: 0;
+  //   width: 100%;
+  //   filter: brightness(110%);
+  // }
+
+  .nav_link {
+    color: white;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: white;
+    font-size: 2rem;
+  }
+
+  // .nav-links-mobile {
+  //   display: block;
+  //   text-align: center;
+  //   padding: 1.5rem;
+  //   margin: 2rem auto;
+  //   width: 80%;
+  //   text-decoration: none;
+  //   font-size: 1.5rem;
+  // }
+
+  //   .nav-links-mobile:hover {
+  //     background: #fff;
+  //     color: #1888ff;
+  //     transition: 250ms;
+  //   }
+}

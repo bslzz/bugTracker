@@ -1,0 +1,89 @@
+@import "./../../styles/scss/variables.scss";
+
+// Home page styling
+.login-button,
+.register-button {
+  width: $button-width;
+  height: $button-height;
+  font-weight: $font-weight;
+  color: $button-font-color;
+  border-radius: 25px;
+  border: none;
+  color: #27224a;
+  cursor: pointer;
+  border: 1px solid #27224a;
+  background: white;
+  outline: none;
+}
+
+.login-button:hover,
+.register-button:hover {
+  cursor: pointer;
+  background: #27224a;
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  //margin: 10rem auto;
+}
+
+.backy {
+  background-image: url("./../../assets/blob.svg");
+  //height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 5px;
+}
+
+.button-wrapper > div {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.button-card {
+  width: 25rem;
+  height: 500px;
+  border-radius: 6px;
+  background: white;
+  padding: 30px 45px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  //width: 100%;
+  position: relative;
+}
+
+.register-head {
+  text-align: center;
+}
+.register-message {
+  padding-top: 5rem;
+  text-align: center;
+  color: #575987;
+  font-weight: 700;
+}
+
+.home-footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  color: #bac1c7;
+}
+.waves {
+    background-image: url("./../../assets/wave.svg");
+  height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.home-footer p {
+  text-align: center;
+}

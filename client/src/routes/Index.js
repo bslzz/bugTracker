@@ -5,15 +5,15 @@ import Route from './Route';
 
 import { GlobalContext } from '../context/GlobalState';
 
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import Admin from '../pages/Admin';
-import Employee from '../pages/Employee';
-import Client from '../pages/Client';
-import Register from '../pages/Register';
-import RegisterClient from '../pages/RegisterAsClient';
-import RegisterEmployee from '../pages/RegisterAsEmployee';
-import LandingPage from '../pages/LandingPage';
+import Home from './../pages/Home/Home';
+import Login from './../pages/Login/Login';
+import Admin from './../pages/Admin/Admin';
+import Employee from './../pages/Employee/Employee';
+import Client from './../pages/Client/Client';
+import Register from './../pages/Register/Register';
+import RegisterClient from './../pages/RegisterAsClient/RegisterAsClient';
+import RegisterEmployee from './../pages/RegisterAsEmployee/RegisterAsEmployee';
+import LandingPage from './../pages/LandingPage/LandingPage';
 
 
 export default function Routes() {
