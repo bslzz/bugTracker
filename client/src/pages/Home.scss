@@ -1,4 +1,4 @@
-@import "../styles/scss/variables.scss";
+@import '../styles/scss/variables.scss';
 
 // Home page styling
 .login-button,
@@ -62,14 +62,6 @@
   font-weight: 700;
 }
 
-.home-footer {
-  bottom: 0;
-  width: 100%;
-  background-color: #ffffff;
-  position: absolute;
-  color: #bac1c7;
-  padding: 39px 0 42px;
-}
 .home-footer p {
   text-align: center;
 }
