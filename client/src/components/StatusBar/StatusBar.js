@@ -22,8 +22,6 @@ export const StatusBar = (props) => {
           <ul>
             <h1>{heading}</h1>
           </ul>
-
-          {/* <Logo /> */}
           <ul>
             <Link onClick={onClick} to="#" className="logout-button">
               Log Out

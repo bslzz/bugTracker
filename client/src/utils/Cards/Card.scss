@@ -1,0 +1,25 @@
+@import "./../../styles/scss/variables.scss";
+
+.button-card {
+  width: 40%;
+  height: 500px;
+  border-radius: 6px;
+  background: white;
+  padding: 25px 50px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.waves {
+  background-image: url("./../../assets/wave.svg");
+  height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}

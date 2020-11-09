@@ -4,6 +4,7 @@ import "./Login.scss";
 
 import { GlobalContext } from "../../context/GlobalState";
 import Logo from "../../components/Logo/Logo";
+import Card from "../../utils/Cards/Card";
 
 const Login = () => {
   
@@ -36,81 +37,84 @@ const Login = () => {
   return (
     <Fragment>
       <Logo />
-      <div className="page-container waves">
-        <div className="test">
-          <form onSubmit={onSubmit} className="form-container">
-            <p className="login-message">Login to your account</p>
+      <Card>
+        <form onSubmit={onSubmit} className="form-container">
+          <p className="login-message">Login to your account</p>
 
+          <div>
+            <label htmlFor="type" className="type-text">
+              <p>Type:</p>
+            </label>
             <div>
-              <label htmlFor="type" className="type-text">
-                Type:
-              </label>
-              <div>
-                <select
-                  className="option-input"
-                  name="type"
-                  value={usertype}
-                  onChange={(e) => setUserType(e.target.value)}
-                >
-                  <option value="client">Client</option>
-                  <option value="admin">Admin</option>
-                  <option value="employee">Employee</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="id" className="type-text">
-                Id:
-              </label>
-              <div>
-                <input
-                  className="option-input"
-                  type="number"
-                  name="id"
-                  value={id}
-                  onChange={(e) => setId(e.target.value)}
-                  placeholder="Enter UserId..."
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="password" className="type-text">
-                Password:
-              </label>
-              <div>
-                <input
-                  className="option-input"
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter Password..."
-                />
-              </div>
-            </div>
-            <button className="logins-button" onClick={login}>
-              Login
-            </button>
-
-            <p className="create-reminder" onClick={register}>
-              Register
-            </p>
-            <p className="terms-conditions">
-              By signing below, you agree to the <br />
-              <b style={{ color: "#fc4463", cursor: "pointer" }}>
-                Terms and Conditions
-              </b>{" "}
-              of this
-              <b
-                style={{ color: "#fc4463", padding: "3px", cursor: "pointer" }}
+              <select
+                className="option-input"
+                name="type"
+                value={usertype}
+                onChange={(e) => setUserType(e.target.value)}
               >
-                Enrolment Agreement.
-              </b>
-            </p>
-          </form>
-        </div>
-      </div>
+                <option value="client">Client</option>
+                <option value="admin">Admin</option>
+                <option value="employee">Employee</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label htmlFor="id" className="type-text">
+              <p>Id:</p>
+            </label>
+            <div>
+              <input
+                className="option-input"
+                type="number"
+                name="id"
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+                placeholder="Enter UserId..."
+              />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="password" className="type-text">
+              <p>Password:</p>
+            </label>
+            <div>
+              <input
+                className="option-input"
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter Password..."
+              />
+            </div>
+          </div>
+          <button className="logins-button" onClick={login}>
+            <p> Login</p>
+          </button>
+
+          <p className="create-reminder" onClick={register}>
+            Register
+          </p>
+          <p className="terms-conditions">
+            By signing below, you agree to the <br />
+            <b style={{ color: "#fc4463", cursor: "pointer" }}>
+              Terms and Conditions
+            </b>{" "}
+            of this
+            <b
+              style={{
+                color: "#fc4463",
+                padding: "3px",
+                cursor: "pointer",
+              }}
+            >
+              Enrolment Agreement.
+            </b>
+          </p>
+        </form>
+      </Card>
+
       <footer className="home-footer">
         <p> © 2020 Buggy. Made by Bishal {"&"} Florence.</p>
       </footer>

@@ -1,0 +1,50 @@
+@import "./../../styles/scss/variables.scss";
+
+.report-card {
+  width: 50%;
+  border-radius: 6px;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 3rem;
+  transition: all 0.5s ease;
+}
+
+.report-card-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: url("./../../assets/wave.svg");
+ // height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.client-side-cards {
+  width: 25%;
+  border-radius: 6px;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 3rem;
+  transition: all 0.5s ease;
+}
+
+.client-side-cards-container {
+  display: grid;
+  
+}
+
+.option-input-report {
+  outline: none;
+  width: 35rem;
+  height: 2rem;
+  border-radius: 3px;
+  border: 1px solid #fc4463;
+}
+
+.option-input-report::placeholder {
+  padding: 10px;
+}

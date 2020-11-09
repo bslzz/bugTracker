@@ -6,6 +6,9 @@ import { GlobalContext } from '../../context/GlobalState';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { ReportBug } from '../../components/ReportBug/ReportBug';
 import { ClientBug } from '../../components/ClientBug/ClientBug';
+import BackCardClient from '../../utils/BackCard/BackCard';
+
+
 
 const Client = () => {
   const {
@@ -57,19 +60,17 @@ const Client = () => {
   return (
     <Fragment>
       <StatusBar props="Client Portal" />
-      <div className="client-card-display">
+      <div className="client-side-card">
         <ReportBug report={report} />
-       
-          {Bugs.map((bug) => (
-            <ClientBug
-              key={bug.bug_id}
-              bug={bug}
-              dlt={dlt}
-              deny={deny}
-              confirm={confirm}
-            />
-          ))}
-   
+        {Bugs.map((bug) => (
+          <ClientBug
+            key={bug.bug_id}
+            bug={bug}
+            dlt={dlt}
+            deny={deny}
+            confirm={confirm}
+          />
+        ))}
       </div>
     </Fragment>
   );

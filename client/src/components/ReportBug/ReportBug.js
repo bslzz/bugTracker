@@ -1,12 +1,13 @@
-import React, { Fragment, useContext, useState } from 'react';
+import React, { Fragment, useContext, useState } from "react";
 
-import { GlobalContext } from '../../context/GlobalState';
+import { GlobalContext } from "../../context/GlobalState";
+import ReportCard from "../../utils/ReportCard/ReportCard";
 
 export const ReportBug = (props) => {
   const { user_id, username } = useContext(GlobalContext);
 
-  const [project, setProject] = useState('');
-  const [bug, setBug] = useState('');
+  const [project, setProject] = useState("");
+  const [bug, setBug] = useState("");
 
   const { report } = props;
 
@@ -24,11 +25,13 @@ export const ReportBug = (props) => {
 
   return (
     <Fragment>
-      <div className="unassigned-card">
-        <form onSubmit={onSubmit} className="report-form">
+      <ReportCard>
+        <form onSubmit={onSubmit} className="register-form">
           <div>
-            <label htmlFor="id">Project:</label>
-            <div className="report-head">
+            <label htmlFor="id" className="type-text">
+              <p>Project:</p>
+            </label>
+            <div>
               <input
                 className="option-input-report"
                 type="string"
@@ -40,8 +43,10 @@ export const ReportBug = (props) => {
             </div>
           </div>
           <div>
-            <label htmlFor="password">Bug:</label>
-            <div className="report-head">
+            <label htmlFor="password" className="type-text">
+              <p>Bug:</p>
+            </label>
+            <div>
               <input
                 className="option-input-report"
                 type="string"
@@ -54,7 +59,7 @@ export const ReportBug = (props) => {
           </div>
           <button className="admin-report-bug">Report Bug</button>
         </form>
-      </div>
+      </ReportCard>
     </Fragment>
   );
 };

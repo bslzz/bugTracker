@@ -2,9 +2,8 @@
 
 .backend-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  align-content: center;
   background-color: white;
 }
 
@@ -157,13 +156,7 @@
   color: white;
 }
 
-.option-input-report {
-  width: 20rem;
-  outline: none;
-  height: 2rem;
-  border-radius: 3px;
-  border: 1px solid rgb(82, 80, 80);
-}
+
 
 .report-head {
   padding: 1rem 0rem;

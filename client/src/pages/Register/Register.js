@@ -3,6 +3,7 @@ import { GlobalContext } from "../../context/GlobalState";
 import { useHistory } from "react-router-dom";
 import "./Register.scss";
 import Logo from "../../components/Logo/Logo";
+import Card from "../../utils/Cards/Card";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -33,66 +34,75 @@ const Register = () => {
   return (
     <Fragment>
       <Logo />
-      <div className="register-form-wrapper waves">
-        <div className="register-container">
-          <form onSubmit={submitForm} className="register-form">
-            <p className="login-message">Register Admin account</p>
+      <Card>
+        <form onSubmit={submitForm} className="register-form">
+          <p className="login-message">Register Admin account</p>
+          <div>
+            <label htmlFor="exampleText" className="type-text">
+              <p>Company Email :</p>
+            </label>
             <div>
-              <label htmlFor="exampleText">Company Email :</label>
-              <div>
-                <input
-                  className="input-text"
-                  type="text"
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="buggy@gmail.com"
-                />
-              </div>
+              <input
+                className="option-input"
+                type="text"
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="buggy@gmail.com"
+              />
             </div>
+          </div>
+          <div>
+            <label htmlFor="exampleText" className="type-text">
+              <p>Username :</p>
+            </label>
             <div>
-              <label htmlFor="exampleText">Username :</label>
-              <div>
-                <input
-                  className="input-text"
-                  type="text"
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="admin"
-                />
-              </div>
+              <input
+                className="option-input"
+                type="text"
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="admin"
+              />
             </div>
+          </div>
 
+          <div>
+            <label htmlFor="exampleInputPassword1" className="type-text">
+              <p>Password :</p>
+            </label>
             <div>
-              <label htmlFor="exampleInputPassword1">Password :</label>
-              <div>
-                <input
-                  className="input-text"
-                  type="password"
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder="password"
-                />
-              </div>
+              <input
+                className="option-input"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="password"
+              />
             </div>
+          </div>
 
-            <button type="submit" className="registers-button">
-              Register As Admin
-            </button>
-            <p className="login-reminder" onClick={login}>
-              Login
-            </p>
-            <p className="terms-conditions">
-              By signing below, you agree to the <br />
-              <b style={{ color: "#fc4463", cursor: "pointer" }}>
-                Terms and Conditions
-              </b>{" "}
-              of this
-              <b
-                style={{ color: "#fc4463", padding: "3px", cursor: "pointer" }}
-              >
-                Enrolment Agreement.
-              </b>
-            </p>
-          </form>
-        </div>
-      </div>
+          <button type="submit" className="registers-button">
+            Register As Admin
+          </button>
+          <p className="login-reminder" onClick={login}>
+            Login
+          </p>
+          <p className="terms-conditions">
+            By signing, you agree to the <br />
+            <b style={{ color: "#fc4463", cursor: "pointer" }}>
+              Terms and Conditions
+            </b>{" "}
+            of this
+            <b
+              style={{
+                color: "#fc4463",
+                padding: "3px",
+                cursor: "pointer",
+              }}
+            >
+              Enrolment Agreement.
+            </b>
+          </p>
+        </form>
+      </Card>
+
       <footer className="home-footer">
         <p> © 2020 Buggy. Made by Bishal {"&"} Florence.</p>
       </footer>
