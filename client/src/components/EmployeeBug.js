@@ -38,7 +38,8 @@ export const EmployeeBug = (props) => {
         )}
         {bug.bug_status === "solution not working" && (
           <p>
-            <span>Previous Solution:</span> {bug.solution}
+            <span className="bug__titles">Previous Solution:</span>{' '}
+            {bug.solution}
           </p>
         )}
         <div>

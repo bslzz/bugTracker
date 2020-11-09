@@ -90,36 +90,36 @@ const LandingPage = () => {
             <span>members and assign work accordingly.</span>
           </div>
         </div>
-      </section>
 
-      {/* Section 5 */}
-      <section className="bug-icons">
-        <div>
-          <h2 className="product-features">Develop Faster</h2>
-          <div className="featured-works">
-            <img
-              src={analytics}
-              className="featured-works-image"
-              alt="featured-works-image"
-            />
+        {/* Section 5 */}
+       
+         
+            <h2 className="product-features-develop">Develop Faster</h2>
+            <div className="featured-works">
+              <img
+                src={analytics}
+                className="featured-works-image"
+                alt="featured-works-image"
+              />
 
-            <img
-              src={assign}
-              className="featured-works-image"
-              alt="featured-works-image"
-            />
-            <img
-              src={search}
-              className="featured-works-image"
-              alt="featured-works-image"
-            />
-            <img
-              src={statistics}
-              className="featured-works-image"
-              alt="featured-works-image"
-            />
-          </div>
-        </div>
+              <img
+                src={assign}
+                className="featured-works-image"
+                alt="featured-works-image"
+              />
+              <img
+                src={search}
+                className="featured-works-image"
+                alt="featured-works-image"
+              />
+              <img
+                src={statistics}
+                className="featured-works-image"
+                alt="featured-works-image"
+              />
+            </div>
+       
+     
       </section>
 
       {/* Footer */}

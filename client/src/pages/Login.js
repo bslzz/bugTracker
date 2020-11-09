@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { useHistory} from "react-router-dom";
 import "./Login.scss";
 
@@ -34,9 +34,9 @@ const Login = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <Logo />
-      <div className="page-container">
+      <div className="page-container waves">
         <div className="test">
           <form onSubmit={onSubmit} className="form-container">
             <p className="login-message">Login to your account</p>
@@ -112,9 +112,9 @@ const Login = () => {
         </div>
       </div>
       <footer className="home-footer">
-        <p>© Bishal {"&"} Florence</p>
+        <p> © 2020 Buggy. Made by Bishal {"&"} Florence.</p>
       </footer>
-    </>
+    </Fragment>
   );
 };
 

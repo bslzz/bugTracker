@@ -60,6 +60,7 @@ const Admin = () => {
                   key={bug.bug_id}
                   bug={bug}
                   employees={employee}
+                  className="bug__container__red"
                   dlt={dlt}
                 />
               )
@@ -73,6 +74,7 @@ const Admin = () => {
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
+                  className="bug__container__blue"
                   unassign={unassign}
                   dlt={dlt}
                 />
@@ -84,6 +86,7 @@ const Admin = () => {
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
+                  className="bug__container__yellow"
                   unassign={unassign}
                   dlt={dlt}
                 />
@@ -98,6 +101,7 @@ const Admin = () => {
                 <AssignedBug
                   key={bug.bug_id}
                   bug={bug}
+                  className="bug__container__orangered"
                   unassign={unassign}
                   dlt={dlt}
                 />
@@ -108,8 +112,13 @@ const Admin = () => {
           <h3 className="product-features">Solved</h3>
           {Bugs.map(
             (bug) =>
-              bug.bug_status === "solved" && (
-                <SolvedBug key={bug.bug_id} bug={bug} dlt={dlt} />
+              bug.bug_status === 'solved' && (
+                <SolvedBug
+                  key={bug.bug_id}
+                  bug={bug}
+                  className="bug__container__green"
+                  dlt={dlt}
+                />
               )
           )}
         </div>

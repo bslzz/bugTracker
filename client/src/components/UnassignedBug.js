@@ -5,7 +5,7 @@ import { AssignEmployee } from '../components/AssignEmployee';
 import { RiDeleteBin6Fill } from "react-icons/ri";
 
 export const UnAssignedBug = (props) => {
-  const { bug, employees, dlt } = props;
+  const { bug, employees, className, dlt } = props;
 
   const onClick = () => {
     dlt(bug.bug_id);

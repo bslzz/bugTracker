@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <Fragment>
       <Logo />
-      <div className="button-container">
-        <div className="button-card">
+      <div className="button-container  waves">
+        <div className="button-card ">
           <p className="register-message">
             This email will be your username to login
           </p>
@@ -46,8 +46,9 @@ const Home = () => {
           </p>
         </div>
       </div>
+    
       <footer className="home-footer">
-        <p>© Bishal {"&"} Florence</p>
+        <p> © 2020 Buggy. Made by Bishal {"&"} Florence.</p>
       </footer>
     </Fragment>
   );

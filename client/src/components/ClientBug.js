@@ -51,7 +51,7 @@ export const ClientBug = (props) => {
           )}
           {bug.bug_status === "solved" && (
             <p>
-              <span>Solution:</span> {bug.solution}
+              <span className="bug__titles">Solution:</span> {bug.solution}
             </p>
           )}
           {bug.bug_status === "solution not working" && (

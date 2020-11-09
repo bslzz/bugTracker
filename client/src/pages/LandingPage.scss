@@ -54,31 +54,6 @@
   //padding: 5rem;
   // height: 25vh;
 }
-.bug-trackers {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  //max-height: 500px;
-  //height: 45vh;
-  margin: 0 auto;
-}
-
-.product-section-wrap {
-  background: white;
-}
-
-.product-features {
-  padding-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: $heading-color;
-}
-
-.support-message {
-  width: 25rem;
-  color: #27224a;
-}
 
 .nav-wrap {
   padding-top: 2rem;
@@ -131,6 +106,45 @@
   background: rebeccapurple;
 }
 
+//section 3
+.bug-trackers {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  //max-height: 500px;
+  //height: 45vh;
+  margin: 0 auto;
+}
+
+.product-section-wrap {
+  background-image: url("../../src/assets/blob.svg");
+  height: 900px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.product-features {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $heading-color;
+}
+
+.product-features-develop{
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $heading-color;
+}
+
+.support-message {
+  width: 25rem;
+  color: #27224a;
+}
+
 // Section 5
 .bug-icons {
   background: white;
@@ -139,9 +153,8 @@
   align-items: center;
   height: 40vh;
   color: #27224a;
-  padding-top: 9rem;
+  padding-top: 2rem;
 }
-
 
 .featured-works-image {
   width: 10%;

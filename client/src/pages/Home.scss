@@ -30,6 +30,14 @@
   //margin: 10rem auto;
 }
 
+.backy {
+  background-image: url("../../src/assets/blob.svg");
+  //height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +76,13 @@
   background-color: #ffffff;
   position: absolute;
   color: #bac1c7;
-  padding: 39px 0 42px;
+}
+.waves {
+  background-image: url("../../src/assets/wave.svg");
+  height: 750px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 .home-footer p {
   text-align: center;

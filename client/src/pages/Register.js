@@ -33,7 +33,7 @@ const Register = () => {
   return (
     <Fragment>
       <Logo />
-      <div className="register-form-wrapper">
+      <div className="register-form-wrapper waves">
         <div className="register-container">
           <form onSubmit={submitForm} className="register-form">
             <p className="login-message">Register Admin account</p>
@@ -93,9 +93,8 @@ const Register = () => {
           </form>
         </div>
       </div>
-
       <footer className="home-footer">
-        <p>© Bishal {"&"} Florence</p>
+        <p> © 2020 Buggy. Made by Bishal {"&"} Florence.</p>
       </footer>
     </Fragment>
   );

@@ -93,6 +93,7 @@ export const GlobalProvider = ({ children }) => {
         username: body.username,
         client_id: data.data.data.client_id,
       };
+      console.log(payload);
 
       localStorage.setItem('type', data.data.type);
       localStorage.setItem('username', body.username);
@@ -126,6 +127,7 @@ export const GlobalProvider = ({ children }) => {
         username: body.username,
         employee_id: data.data.data.employee_id,
       };
+      console.log(payload);
 
       localStorage.setItem('type', data.data.type);
       localStorage.setItem('username', body.username);

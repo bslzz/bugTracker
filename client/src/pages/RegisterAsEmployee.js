@@ -22,6 +22,7 @@ const RegisterEmployee = () => {
 
     try {
       const body = { username, password };
+      console.log(body);
       registerEmployee(body);
       alert(`Your id is ${+employeeId + 1}`);
     } catch (error) {

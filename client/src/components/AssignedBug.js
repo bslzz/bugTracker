@@ -3,7 +3,7 @@ import "./StatusBar.scss";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 
 export const AssignedBug = (props) => {
-  const { bug, unassign, dlt } = props;
+  const { bug, className, unassign, dlt } = props;
 
   const onClick = () => {
     unassign(bug.bug_id);
