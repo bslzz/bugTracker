@@ -6,7 +6,7 @@ import { GlobalContext } from '../../context/GlobalState';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { ReportBug } from '../../components/ReportBug/ReportBug';
 import { ClientBug } from '../../components/ClientBug/ClientBug';
-import BackCardClient from '../../utils/BackCard/BackCard';
+
 
 
 
