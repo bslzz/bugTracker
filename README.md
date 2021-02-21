@@ -22,7 +22,7 @@ if you are using npm, modify package.json in your root folder
   },
 ```
 
-## Techlogies and libraries used
+## Technologies and libraries used
 
 - React
 - Node + Express
